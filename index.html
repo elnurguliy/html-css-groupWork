@@ -8,10 +8,9 @@
     <title>Ramlösa</title>
     <meta name="description"
         content="Ramlösa är Sveriges naturliga mineralvatten med traditioner sedan 1707. Naturligt mineralvatten är den finaste beteckningen ett vatten kan få. När en ny flaska Ramlösa når din hand har 70 års arbete kommit till sin ände.">
-
-    <base href="https://ramlosa.se/">
-
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 
 
@@ -26,269 +25,256 @@
     <link href="resources/js/owl.carousel/owl-carousel/owl-e546522f1a.transitions.css" rel="stylesheet">
     <link href="resources/js/owl.carousel/owl-carousel/owl-682fe060d8.carousel.css" rel="stylesheet">
     <link href="resources/js/owl.carousel/owl-carousel/owl-f8f4cc1cf7.theme.css" rel="stylesheet">
-
-    <style>
-        /* Grundläggande styling */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .videos {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-
-        .video-item {
-            position: relative;
-            width: 320px;
-            height: 180px;
-            cursor: pointer;
-        }
-
-        .video-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .play-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            opacity: 0.8;
-        }
-
-        /* Överlagring för video */
-        .video-overlay {
-            display: none;
-            /* Döljer överlagringen som standard */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .video-overlay iframe {
-            width: 80%;
-            height: 80%;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .videos {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .video-item {
-            position: relative;
-            width: 320px;
-            height: 180px;
-            cursor: pointer;
-        }
-
-        .video-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .play-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            opacity: 0.8;
-        }
-
-        .video-iframe {
-            width: 100%;
-            height: 180px;
-            border: none;
-            display: none;
-        }
-
-        .video-item.active .video-iframe {
-            display: block;
-        }
-
-
-        footer {
-    padding: 20px;
-    background-color: #f1f1f1;
-}
-
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-footer .footer-info {
-    margin-top: 20px;
-}
-
-footer img {
-    max-width: 100%;
-}
-
-footer a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-    </style>
-
 </head>
 
 
 <body class="preload" data-layout-id="1">
     <header>
-        <div class="cookies">
+        <!--COOKIES<div class="cookies">
             <p>
                 För att förbättra och anpassa ditt besök använder vi cookies. Genom att fortsätta använda vår webbplats
                 accepterar du att cookies används. <a href="#">Läs mer om cookies.</a>
                 <img class="close" src="resources/images/close.png" alt="Close">
             </p>
-        </div>
-
-        <div class="container clearfix">
-            <div class="logo">
-                <ul>
-                    <li>
-                        <a href="/">
-                            <img src="resources/images/ramlosa_logo_2023.svg" alt="Ramlösa">
-                        </a>
-                    </li>
-                </ul>
+        </div>-->
+        <div class="header-container">
+            <div class="header-inner">
+                <div class="logo-container">
+                    <a href="https://ramlosa.se/">
+                        <img id="logotype" src="https://ramlosa.se/resources/images/ramlosa_logo_2023.svg" alt="Ramlösa logotype">
+                    </a>
+                </div>
+    
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <button class="hamburger hamburger--elastic" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+    
+                <nav class="navigation">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="https://ramlosa.se/produkter" class="navigation-item">Produkter</a>
+                        </li>
+                        <li>
+                            <a href="https://ramlosa.se/vart-vatten" class="navigation-item">Vårt
+                                vatten</a>
+                        </li>
+                        <li>
+                            <a href="https://ramlosa.se/vattenfonden"
+                            class="navigation-item">Vattenfonden</a>
+                        </li>
+                        <li>
+                            <a href="https://ramlosa.se/historia" class="navigation-item">Historia</a>
+                        </li>
+                        <li>
+                            <a href="https://ramlosa.se/kontakt" class="navigation-item">Kontakt</a>
+                        </li>
+    
+                        <li>
+                            <a id="facebook-link" href="https://www.facebook.com/Ramlosa/?fref=ts&ref=br_tf" target="_blank"
+                                class="fb-icon ">
+                                <img src="https://ramlosa.se/resources/images/fb_icon.svg" alt="Facebook">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-
-            <div class="menu">
-                <ul>
-                    <li>
-                        <button class="hamburger hamburger--elastic" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="navigation clearfix">
-                <ul>
-                    <li class="navigation-item">
-                        <a href="https://ramlosa.se/produkter" class="mellow_page_active mellow_page_3 ">Produkter</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a href="https://ramlosa.se/vart-vatten" class="mellow_page_active mellow_page_13 ">Vårt
-                            vatten</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a href="https://ramlosa.se/vattenfonden"
-                            class="mellow_page_active mellow_page_10 ">Vattenfonden</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a href="https://ramlosa.se/historia" class="mellow_page_active mellow_page_11 ">Historia</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a href="https://ramlosa.se/kontakt" class="mellow_page_active mellow_page_14 ">Kontakt</a>
-                    </li>
-
-                    <li class="navigation-item">
-                        <a id="facebook-link" href="https://www.facebook.com/Ramlosa/?fref=ts&ref=br_tf" target="_blank"
-                            class="fb-icon ">
-                            <img src="resources/images/fb_icon.svg" alt="Facebook">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            
         </div>
     </header>
 
     <main>
 
 
-        <section id="image-slider-wrapper">
-            <div class="youtube-embed">
+        <section class="main-1">
+            <div class="embed-1-container">
                 <iframe
-                    src="https://player.vimeo.com/video/949517908?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+                    id="video-1" src="https://player.vimeo.com/video/949517908?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
                     frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                     title="RAMLÖSA"></iframe>
-            </div>
             </div>
         </section>
 
         <!-- Rename the section below to something semantic -->
-        <section class="redcross" data-equal>
-            <div class="redcross-text" data-equal-target>
-                <h2 class="">Vatten som räddar liv</h2>
-                <div class="">
-                    <p class="m_-8973639192038247452MsoListParagraph">F&ouml;r varje liter&nbsp;<span
-                            class="il">Raml&ouml;sa</span>&nbsp;som s&auml;ljs sk&auml;nker&nbsp;<span
-                            class="il">Raml&ouml;sa</span>&nbsp;Vattenfond motsvarande en liter rent vatten till Svenska
+        <section class="redcross">
+            <div class="redcross-text">
+                <h1>VATTEN SOM RÄDDAR LIV</h1>
+                <div>
+                    <p>F&ouml;r varje liter&nbsp;<span>Raml&ouml;sa</span>&nbsp;som s&auml;ljs sk&auml;nker&nbsp;<span>Raml&ouml;sa</span>&nbsp;Vattenfond motsvarande en liter rent vatten till Svenska
                         R&ouml;da Korsets vattenprojekt i utsatta omr&aring;den runt om i v&auml;rlden. Sedan starten
-                        2011 har&nbsp;<span class="il">Raml&ouml;sa</span>&nbsp;Vattenfond bidragit med mer &auml;n
+                        2011 har&nbsp;<span>Raml&ouml;sa</span>&nbsp;Vattenfond bidragit med mer &auml;n
                         motsvarande 950 miljoner liter rent vatten till beh&ouml;vande.</p>
-                    <p class="m_-8973639192038247452MsoListParagraph">Det &auml;r m&ouml;jligt tack vare er, alla
-                        konsumenter, som tycker om och dricker&nbsp;<span class="il">Raml&ouml;sa</span>. Tillsammans
+                    <p>Det &auml;r m&ouml;jligt tack vare er, alla
+                        konsumenter, som tycker om och dricker&nbsp;<span>Raml&ouml;sa</span>. Tillsammans
                         har vi bidragit till att miljontals m&auml;nniskor f&aring;tt f&ouml;rb&auml;ttrade
                         levnadsvillkor, genom tillg&aring;ng till rent vatten, f&ouml;rb&auml;ttrade sanit&auml;ra
                         f&ouml;rh&aring;llanden och m&ouml;jlighet att sk&ouml;ta sin hygien. M&aring;nga liv har kunnat
                         r&auml;ddas.</p>
-                    <p class="m_-8973639192038247452MsoListParagraph">Det &auml;r n&aring;got vi alla ska vara stolta
+                    <p>Det &auml;r n&aring;got vi alla ska vara stolta
                         &ouml;ver. Tack!<br /><a href="https://ramlosa.se/vattenfonden">L&auml;s mer &raquo;</a></p>
                 </div>
             </div>
 
-            <div class="redcross-image" data-equal-target>
-                <img src="https://ramlosa.se/resources/images/redcross_forman.png">
+            <div class="redcross-img-container">
+                <img id="redcross-image" src="https://ramlosa.se/resources/images/redcross_forman.png">
             </div>
         </section>
 
+        <!-- OWL carousel, se över senare 
 
+        <section id="product-slider-wrapper">
+            <h1>Vilken är din favorit?</h1>
+
+            <div class="container">
+                <a href="#prev" class="slider-controls"><img src="https://ramlosa.se/resources/images/arrow_left_blue.png" alt="Previous"></a>
+
+                <div id="product-slider" class="owl-carousel">
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/premium-original">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/227_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/premium-stilla">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/229_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/premium-citrus">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/228_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/mango-grapefrukt">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/224_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/svarta-vinbar">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/226_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/original">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/207_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/stilla">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/208_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/citrus">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/209_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/hallon-apple">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/210_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/paron">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/212_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/ananas">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/213_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/flader-lime">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/214_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                            <div class="product">
+                        <div class="new"></div>
+                        <a href="https://ramlosa.se/produkter/granatapple">
+                            <img src="https://ramlosa.se//mellow_internal/imagefolder/en//generated/216_ee0c092cc61c4d284c6eaec9bed0a6a8" class="product-image">
+                            <div class="shadow">
+                                <img src="https://ramlosa.se/resources/images/shadow.png">
+                            </div>
+                        </a>
+                    </div>
+                                        </div>
+
+                <a href="#next" class="slider-controls"><img src="https://ramlosa.se/resources/images/arrow_right_blue.png" alt="Next"></a>
+            </div>
+
+            <div class="clear"></div>
+        </section> -->
 
 
         <section class="videos">
-            <div class="video-item" data-video-id="T88inlotu9c">
-                <img src="https://img.youtube.com/vi/T88inlotu9c/sddefault.jpg" alt="Video Thumbnail">
-                <img src="https://ramlosa.se/resources/images/icon_play.png" class="play-icon" alt="Play Icon">
+            <h2>SE VÅRA REKLAMFILMER</h2>
+            <div class="video-row">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/T88inlotu9c?si=CF2XQwGOstjfeNXD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_GVfc9BIdL0?si=VUiW78I3O-Ok-RDK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <div class="video-item" data-video-id="_GVfc9BIdL0">
-                <img src="https://img.youtube.com/vi/_GVfc9BIdL0/sddefault.jpg" alt="Video Thumbnail">
-                <img src="https://ramlosa.se/resources/images/icon_play.png" class="play-icon" alt="Play Icon">
-            </div>
+            
             <div class="video-item" data-video-id="uzBPb6L2yvA">
-                <img src="https://img.youtube.com/vi/uzBPb6L2yvA/sddefault.jpg" alt="Video Thumbnail">
-                <img src="https://ramlosa.se/resources/images/icon_play.png" class="play-icon" alt="Play Icon">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uzBPb6L2yvA?si=SxylIbmm4ZaXLBLN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
+
+        
 
         <!-- Överlagring för video -->
         <div id="video-overlay" class="video-overlay">
@@ -318,14 +304,14 @@ footer a:hover {
 </main>
 
 <footer>
-    <div class="container">
-        <!-- Logo -->
-        <a href="/">
-            <img src="resources/images/ramlosa_logo_2023.svg" alt="Ramlösa Logo">
-        </a>
-
+    <div class="footer-container">
+        
         <!-- Footer Information -->
-        <div class="footer-info">
+        <div class="footer-content">
+            <!-- Logo -->
+        <a href="https://ramlosa.se/">
+            <img id="footer-logo" src="https://ramlosa.se/resources/images/ramlosa_logo_2023.svg" alt="Ramlösa Logo">
+        </a>
             <p>
                 Ramlösa är Sveriges naturliga mineralvatten med traditioner sedan 1707. Naturligt mineralvatten är den finaste beteckningen ett vatten kan få. Mineralvattnet från Ramlösa Hälsobrunn får sin goda smak av mineraler och salter när det vandrar genom de skånska ängarna och berggrunden. En törstsläckare direkt från naturen, tappad vid källan och lätt uppfriskad med kolsyra.
             </p>
@@ -341,6 +327,8 @@ footer a:hover {
             </p>
         </div>
     </div>
+
+    
 </footer>
 
 </body>

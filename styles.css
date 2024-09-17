@@ -1,134 +1,280 @@
- /* Grundläggande styling */
- body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    list-style: none;
+    text-decoration: 0;
+    font-family: Reddit Sans Condensed, sans-serif;
+    box-sizing: border-box;
+
 }
 
-.videos {
+body {
+    color: #282f54;
+    line-height: 1.4em;
+    font-size: 1.07em;
+}
+
+.header-container {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 20px;
+    height: 115px;
 }
 
-.video-item {
-    position: relative;
-    width: 320px;
-    height: 180px;
-    cursor: pointer;
-}
-
-.video-item img {
-    width: 100%;
+.header-inner {
+    height: 115px;
+    width: 1200px;
     height: 100%;
-    object-fit: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.play-icon {
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navigation-item {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: 700;
+  color: #95c7ed;
+  font-size: 1.25rem;
+}
+
+
+#logotype {
+    width: 240px;
+    height: 60px;
+}
+
+.main-1 {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.embed-1-container {
+    width: 100%; /* Låter containern fylla hela header-inner */
+    max-width: 1300px; /* Maximal bredd för stora skärmar */
+    margin: 0 auto; /* Centrera om den är mindre än 100% */
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+#video-1 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    opacity: 0.8;
-}
-
-/* Överlagring för video */
-.video-overlay {
-    display: none;
-    /* Döljer överlagringen som standard */
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+    border: 0;   
+   
 }
 
-.video-overlay iframe {
-    width: 80%;
-    height: 80%;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.videos {
+.redcross {
+    padding: 50px;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-.video-item {
+.redcross h1 {
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+}
+
+.redcross p {
+    margin-top: 20px;
+    font-weight: 600;
+}
+.redcross-text {
+    width: 30%;
+}
+
+#redcross-image {
+    width: 458px;
+}
+
+
+/* Grundläggande styling för sektionen */
+.videos {
+    width: 1300px;
+    padding: 50px;
+    font-size: 2rem;
+    color: white;
+    text-align: center; /* Centrera rubriken och innehåll */
+    margin: 20px auto; /* Ge marginaler för sektionen */
+    background-color: #d0dae6;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Rubrik över videoklippen */
+.videos h2 {
+    padding-bottom: 100px; /* Marginal under rubriken */
+}
+
+
+
+/* Rad som innehåller två videoklipp */
+.videos-row {
+    display: flex; /* Använd flexbox för att placera videoklippen horisontellt */
+    margin-bottom: 20px; /* Marginal mellan raderna */
+}
+
+/* Styling för varje videoklipp */
+.videos-item {
+    margin: 0 10px; /* Marginal mellan videoklippen */
+    text-decoration: none; /* Ta bort understrykning */
+}
+
+/* Styling för videominiatyrer */
+.video-thumbnail {
+    background-position: center center;
+    background-size: cover; /* Se till att bilden täcker hela området */
+    background-repeat: no-repeat;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     position: relative;
-    width: 320px;
-    height: 180px;
-    cursor: pointer;
-}
-
-.video-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 300px; /* Maximal bredd för varje miniaturbild */
 }
 
-.play-icon {
+/* Play-knapp */
+.item-play {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    opacity: 0.8;
+    cursor: pointer; /* Indikera att knappen är klickbar */
 }
 
-.video-iframe {
+.item-play img {
+    width: 40px; /* Storlek på play-knappen */
+}
+
+
+.footer-container{
+    background-color: #d0dae6;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+#footer-logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    width: 50%;
+    margin: 50px;
+    
+}
+
+.footer-content p {
+    color: #282f54;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GPT css för owl-carousel */
+/*
+#product-slider-wrapper {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+#product-slider-wrapper h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container {
+    position: relative;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.slider-controls img {
+    width: 30px;
+    height: auto;
+}
+
+.slider-controls[href="#prev"] {
+    left: 10px;
+}
+
+.slider-controls[href="#next"] {
+    right: 10px;
+}
+
+#product-slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.product {
+    position: relative;
+    margin: 0 10px;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image {
     width: 100%;
-    height: 180px;
-    border: none;
-    display: none;
-}
-
-.video-item.active .video-iframe {
+    height: auto;
     display: block;
 }
 
-
-footer {
-    padding: 20px;
-    background-color: #f1f1f1;
+.shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
 }
 
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.clear {
+    clear: both;
 }
 
-footer .footer-info {
-    margin-top: 20px;
-}
+@media (max-width: 768px) {
+    #product-slider-wrapper h1 {
+        font-size: 20px;
+    }
+    .slider-controls img {
+        width: 20px;
+    }
+}*/
 
-footer img {
-    max-width: 100%;
-}
 
-footer a {
-    color: #007bff;
-    text-decoration: none;
-}
 
-footer a:hover {
-    text-decoration: underline;
-}
+
+
+
+
