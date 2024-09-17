@@ -1,0 +1,134 @@
+ /* Grundläggande styling */
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.videos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.video-item {
+    position: relative;
+    width: 320px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.video-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+}
+
+/* Överlagring för video */
+.video-overlay {
+    display: none;
+    /* Döljer överlagringen som standard */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-overlay iframe {
+    width: 80%;
+    height: 80%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.videos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.video-item {
+    position: relative;
+    width: 320px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.video-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+}
+
+.video-iframe {
+    width: 100%;
+    height: 180px;
+    border: none;
+    display: none;
+}
+
+.video-item.active .video-iframe {
+    display: block;
+}
+
+
+footer {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer .footer-info {
+    margin-top: 20px;
+}
+
+footer img {
+    max-width: 100%;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
