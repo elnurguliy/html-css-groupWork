@@ -1,0 +1,178 @@
+/* Vårt Vatten */
+
+.main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #282f54;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.headimg {
+  margin: 0px 0px 64px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column {
+  width: 65%;
+  margin: 0 auto;
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.4em;
+  font-size: 1.07em;
+  font-weight: 600;
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  margin: 32px 0px 32px;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+.row {
+  margin-bottom: 3em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; 
+  font-family: Reddit Sans Condensed, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  background: #fff;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10%; /* Flexibel padding för att anpassa skärmstorlek */
+  max-width: 95%;
+  margin: 0 auto;
+  width: 100%; /* Gör container responsiv */
+}
+
+/* Navigation */
+header .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0;
+  margin-left: 2%;
+}
+
+header .navigation ul li {
+  display: inline-block;
+  margin-right: 2%; /* Procentbaserad marginal */
+  font-size: 1em;
+  font-weight: 400;
+}
+
+header .navigation ul li:last-child {
+  margin-right: 0;
+}
+
+header .navigation ul li a {
+  padding-left: 1em;
+  font-size: 1em;
+  font-weight: 500;
+  color: #95c7ed;
+}
+
+/* Facebook Ikon */
+header .navigation ul li a#facebook-link {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* Ramlösa logo */
+#logotype {
+  width: 100%; /* Flexibel logobredd */
+  max-width: 240px;
+  height: auto;
+  padding-top: 50px;
+}
+
+
+/* Footer section */
+footer {
+  background-color: #d0dae6;
+  width: 100%;
+  padding: 64px 0;
+  
+}
+
+.footer-content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: #384277;
+}
+
+.footer-content p {
+  color: #282f54;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Justera innehållet till vänster */
+  margin: 0 5%;
+  padding: 0 5%;
+}
+
+#footer-logo {
+  width: 100%;
+  max-width: 190px;
+  margin-bottom: 1em; /* Avstånd under loggan */
+}
+
+.footer-text {
+  width: 100%;
+  max-width: 1180.81px; /* Maximal bredd för texten */
+}
+
+.footer-text p {
+  margin: 0; /* Ta bort standardmarginal */
+  margin-bottom: 17.12px; /* Avstånd mellan paragrafer */
+}
+
+.footer-text p:last-child {
+  margin-bottom: 0; /* Ingen extra marginal på sista paragrafen */
+}
+
