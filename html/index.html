@@ -23,6 +23,8 @@ sizes="32x32">
 
 <link rel="icon" type="image/png" href="https://ramlosa.se/resources/images/favicons/favicon-16x16.png"
 sizes="16x16">
+
+
 </head>
 
 
@@ -33,7 +35,7 @@ sizes="16x16">
 <div class="container">
 <div class="logo">
 <a href="#">
-<img id="logotype" src="../images/ramlosa_logo.svg" alt="Ramlösa logotype">
+<img id="logotype" src="../images/ramlosa_logo.svg" alt="Ramlösa logotyp">
 </a>
 </div>
 <div class="menu">
@@ -87,6 +89,22 @@ frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write"
 title="RAMLÖSA"></iframe>
 </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const body = document.body; // Vi lägger till klassen på body
+  
+    if (hamburger) {
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("is-active");
+        body.classList.toggle("menu-active"); // Lägg till eller ta bort klass för att flytta ner innehållet
+      });
+    } else {
+      console.error("Hamburger element not found!");
+    }
+  });
+</script> 
 
 <!-- Rename the section below to something semantic -->
 <section class="redcross" data-equal>
@@ -371,9 +389,9 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
     </div>
 <footer>
 <div class="footer-container">
-<a href="https://ramlosa.se/">
-<img id="footer-logo" src="../images/ramlosa_logo.svg" alt="Ramlösa Logo">
-</a>
+    <a href="https://ramlosa.se/"></a>
+        <img class="footer-logo" src="../images/ramlosa_logo.svg" alt="Ramlösa Logo">
+    </a>
 <div class="footer-text">
 <p>
 Ramlösa är Sveriges naturliga mineralvatten med traditioner sedan 1707. Naturligt mineralvatten är
