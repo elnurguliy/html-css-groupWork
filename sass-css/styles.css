@@ -152,7 +152,6 @@ header .navigation ul li a#facebook-link {
   margin: 0 auto;
   position: relative;
   padding-bottom: 56.25%;
-  overflow: hidden;
 }
 
 #video-1 {
@@ -191,6 +190,14 @@ header .navigation ul li a#facebook-link {
   width: 100%;
   max-width: 100%;
   text-align: left;
+}
+
+@media screen and (min-width: 1035px) {
+  .redcross .redcross-text {
+      float: left;
+      margin-right: 2%;
+      width: 57.5%;
+  }
 }
 
 .redcross .redcross-text a {
@@ -324,7 +331,6 @@ p {
   right: 1em;
 }
 
-/* Video section */
 .videos {
   width: 100%;
   padding: 50px;
@@ -341,43 +347,37 @@ p {
   padding-bottom: 100px;
 }
 
-iframe {
-  margin: 20px;
-}
-
 .videos-row {
   display: flex;
+  justify-content: center; /* Centrera videorna */
+  flex-wrap: wrap; /* Tillåt wrap */
   margin-bottom: 20px;
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  padding-bottom: 56.25%;
-  position: relative;
-  flex-wrap: wrap;
-  /* Flexibel för små skärmar */
 }
 
-.video-thumbnail {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: 56.25%;
-  position: relative;
-  width: 100%;
-  max-width: 300px;
+.video-item {
+  margin: 10px; /* Avstånd mellan videor */
+  flex: 1 1 300px; /* Gör videorna flexibla */
+  max-width: 100%; /* Gör dem responsiva */
 }
 
-.item-play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
+.video-item iframe {
+  width: 100%; /* Gör iframes responsiva */
+  height: auto; /* Håller aspect ratio */
 }
 
-.item-play img {
-  width: 40px;
+@media (max-width: 768px) {
+  .videos {
+    padding: 30px; /* Minska padding på små skärmar */
+    font-size: 1.5rem; /* Minska fontstorlek */
+  }
+
+  .videos h2 {
+    padding-bottom: 50px; /* Minska avstånd under rubriken */
+  }
 }
+
+
+
 
 /* Footer section */
 footer {
