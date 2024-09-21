@@ -32,7 +32,7 @@ sizes="16x16">
     <div class="wrapper">
 
 <header>
-<div class="container">
+<div class="header-container">
 <div class="logo">
 <a href="#">
 <img id="logotype" src="../images/ramlosa_logo.svg" alt="Ramlösa logotyp">
@@ -84,8 +84,8 @@ target="_blank" class="fb-icon">
 <section class="main-1">
 <div class="embed-1-container">
 <iframe id="video-1"
-src="https://player.vimeo.com/video/949517908?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=0&loop=1"
-frameborder="0" allow="fullscreen; picture-in-picture; clipboard-write"
+src="https://player.vimeo.com/video/949517908?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
 title="RAMLÖSA"></iframe>
 </div>
 </section>
@@ -431,4 +431,21 @@ console.error("Hamburger element not found!");
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+    const shadowClass = "shadow";
+
+    function handleScroll() {
+        if (window.scrollY > 0) {
+            header.classList.add(shadowClass);
+        } else {
+            header.classList.remove(shadowClass);
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check in case user is already scrolled down
+});
+</script>
 </body>
