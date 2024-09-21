@@ -1,0 +1,101 @@
+/* Standard-stil för hamburgarmenyn (göm den på större skärmar) */
+.hamburger {
+    padding: 15px 15px;
+    display: none; /* Dölj den som standard */
+    cursor: pointer;
+    transition-timing-function: linear;
+    font: inherit;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+  }
+  
+  /* När skärmen är mindre än 1034px, visa hamburgarmenyn */
+  @media (max-width: 1034px) {
+    .hamburger {
+      display: block; /* Visa hamburgarmenyn */
+      position: relative;
+      z-index: 101; /* Placera den ovanför annat innehåll */
+    }
+  
+    /* Göm den vanliga navigeringen på små skärmar */
+    header .navigation {
+      display: none;
+    }
+  
+    /* När hamburgermenyn är aktiv, visa navigeringen */
+    header.active .navigation {
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 100; /* Se till att navigeringen ligger ovanpå */
+    }
+  
+    /* Gör navigeringen vertikal istället för horisontell */
+    header .navigation ul {
+      flex-direction: column;
+      align-items: center; /* Justera menyn till center */
+    }
+  
+    /* Ge navigeringspunkterna lite mer utrymme på små skärmar */
+    header .navigation ul li {
+      margin-bottom: 10px;
+    }
+  
+    /* Stil för varje länk */
+    header .navigation ul li a {
+      padding: 15px 20px;
+      width: 100%;
+      text-align: left; /* Justera länkar till vänster */
+      border-bottom: 1px solid #eee; /* Valfri gräns för separering */
+    }
+  }
+  
+  /* För större skärmar */
+  @media (min-width: 1035px) {
+    /* Dölj hamburgarmenyn på stora skärmar */
+    .hamburger {
+      display: none;
+    }
+  
+    /* Visa den horisontella navigeringen */
+    header .navigation {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  
+  .hamburger:hover {
+    opacity: .7;
+  }
+  
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hamburger .hamburger-inner {
+    background: #003f75;
+  }
+  
+  .hamburger--elastic .hamburger-inner {
+    top: 2px;
+  }
+  
+  .hamburger .hamburger-inner::before {
+    background: #003f75;
+  }
+  
+  .hamburger .hamburger-inner::after {
+    background: #003f75;
+  }
+
+  
+  
