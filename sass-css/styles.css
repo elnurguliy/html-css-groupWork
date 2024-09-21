@@ -1,338 +1,339 @@
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none; 
+  text-decoration: none;
   font-family: Reddit Sans Condensed, sans-serif;
   box-sizing: border-box;
-}
-
-/* Header Styles */
-header {
+  }
+  
+  .wrapper {
+  max-width: 1450px; /* Max bredd för innehållet */
+  margin: 0 auto; /* Centrera wrappern */
+  padding: 20px; /* Valfri padding */
+  }
+  
+  /* Header Styles */
+  header {
   background: #fff;
   position: relative;
   z-index: 100;
   width: 100%;
-  left: 0;
-  top: 0;
-}
-
-/* Container */
-.container {
+  }
+  
+  /* Container */
+  header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 0 10%; /* Flexibel padding för att anpassa skärmstorlek */
-  max-width: 95%;
-  margin: 0 auto;
-  width: 100%; /* Gör container responsiv */
-}
-
-/* Navigation */
-header .navigation ul {
+  top: 0; /* Placerar den högst upp */
+  width: 100%; /* Gör den full bredd */
+  background: #fff; /* Se till att bakgrunden är vit så att texten är läsbar */
+  z-index: 100; /* Ser till att den ligger ovanpå annat innehåll */
+  padding-top: 1em;
+  padding-right: 4em;
+  padding-left: 4em;
+  }
+  
+  .scrolled header .navigation ul {
+  margin: 0;
+  margin-top: 1.3em;
+  margin-bottom: .6em;
+  }
+  
+  /* Ramlösa logotype */
+  header .container a img#logotype {
+  display: block;
+  float: inline-start;
+  width: 240px;
+  height: auto;
+  width: 100%;
+  }
+  
+  /* Meny */
+  header .menu {
+  margin-left: auto;
   display: flex;
+  align-items: center;
+  }
+  
+  header .menu ul li {
+  vertical-align: middle;
+  display: inline-block;
+  }
+  
+  /* Navigation */
+  header .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap; /* Hindrar texten från att brytas på flera rader */
+  }
+  
+  header .navigation ul {
+  display: flex;
+  vertical-align: middle;
   justify-content: flex-end;
   align-items: center;
   padding-left: 0;
   margin-left: 2%;
-}
-
-header .navigation ul li {
-  display: inline-block;
-  margin-right: 2%; /* Procentbaserad marginal */
-  font-size: 1em;
-  font-weight: 400;
-}
-
-header .navigation ul li:last-child {
-  margin-right: 0;
-}
-
-header .navigation ul li a {
+  }
+  
+  header .navigation ul li a {
+  display: block;
   padding-left: 1em;
-  font-size: 1em;
-  font-weight: 500;
+  padding-right: 1em;
+  font-size: 1.25em;
   color: #95c7ed;
-}
-
-/* Facebook Ikon */
-header .navigation ul li a#facebook-link {
+  white-space: nowrap; /* Håller ihop texten för att undvika radbrytningar */
+  }
+  
+  header .navigation ul li:last-child {
+  margin-right: 0;
+  }
+  
+  /* Facebook Ikon */
+  header .navigation ul li a#facebook-link {
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0;
   vertical-align: middle;
-}
-
-/* Hamburgermeny */
-header .menu {
-  display: none;
-}
-
-header .menu ul li {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-/* Media Query för Responsivitet */
-@media (max-width: 768px) {
+  }
+  
+  /* Media Query för Responsivitet */
+  @media (max-width: 768px) {
   header .menu {
-    display: block;
+  display: block;
   }
-
+  
   header .navigation {
-    display: none;
+  display: none;
   }
-
+  
   .container {
-    padding: 0 5%; /* Mer padding för mindre skärmar */
+  padding: 0 5%;
+  /* Mer padding för mindre skärmar */
   }
-
+  
   /* När hamburgermenyn är aktiv */
   header.active .navigation {
-    display: block;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-  }
-
-  header .navigation ul {
-    flex-direction: column;
-  }
-
-  header .navigation ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-
-
-/* Hamburger Menu */
-.hamburger {
-  padding-right: 0;
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.hamburger-inner {
   display: block;
-  margin-top: -2px;
-}
-
-.hamburger--elastic .hamburger-inner {
-  top: 2px;
-}
-
-.hamburger-box {
-  width: 40px;
-  height: 24px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger .hamburger-inner {
-  background: #003f75;
-}
-
-.hamburger-inner,
-.hamburger-inner::after,
-.hamburger-inner::before {
-  width: 40px;
-  height: 4px;
-}
-
-/* Ramlösa logo */
-#logotype {
-  width: 100%; /* Flexibel logobredd */
-  max-width: 240px;
-  height: auto;
-  padding-top: 50px;
-}
-
-/* The video at the top */
-.main-1 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  }
+  
+  header .navigation ul {
+  flex-direction: column;
+  }
+  
+  header .navigation ul li {
+  margin-right: 0;
+  margin-bottom: 10px;
+  }
+  }
+  
+  /* The video at the top */
+  .main-1 {
   max-width: 100%;
   margin: 0 auto;
-}
-
-.embed-1-container {
+  }
+  
+  .embed-1-container {
   width: 100%;
-  max-width: 100%; 
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
   padding-bottom: 56.25%;
-  overflow: hidden;
-}
-
-#video-1 {
+    overflow: hidden;
+  }
+  
+  #video-1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 97%;
   height: 100%;
   border: 0;
-}
-
-/* Article and the redcross section */
-.redcross {
+  }
+  
+  /* Article and the redcross section */
+  .redcross {
   padding: 4em 3.6em 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* Flexibel layout för olika skärmstorlekar */
-}
-
-.redcross h1 {
+  flex-wrap: wrap;
+  /* Flexibel layout för olika skärmstorlekar */
+  }
+  
+  .redcross h1 {
+  text-align: left;
   font-size: 2.5rem;
+  letter-spacing: .03em;
   padding-bottom: 30px;
-}
-
-.redcross p {
+  }
+  
+  .redcross p {
   margin-top: 20px;
-  font-weight: 600;
-}
-
-.redcross-text {
+  font-weight: 400;
+  }
+  
+  .redcross-text {
+  float: left;
   width: 100%;
-  max-width: 30%;
-  text-align: center;
-}
-
-#redcross-image {
+  max-width: 100%;
+  text-align: left;
+  }
+  
+  @media screen and (min-width: 1035px) {
+    .redcross .redcross-text {
+        float: left;
+        margin-right: 2%;
+        width: 57.5%;
+    }
+  }
+  
+  .redcross .redcross-text a {
+  display: inline-block;
+  color: #95c7ed;
+  }
+  
+  dd,
+  dt,
+  li:not(.navigation-item),
+  p {
+  margin-bottom: 0;
+  line-height: 1.4em;
+  font-size: 1.07em;
+  text-rendering: geometricPrecision;
+  }
+  
+  #redcross-image {
   width: 100%;
   max-width: 458px;
-}
-
-/* Product Slider section */
-#product-slider {
+  }
+  
+  /* Product Slider section */
+  #product-slider {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Ändra till flex-start för att justera bilderna */
   align-items: center;
   transition: transform 0.3s ease-in-out;
   flex-wrap: nowrap;
-  overflow: visible;
-}
-
-#product-slider-wrapper #product-slider {
+  overflow: hidden; /* Ändra till hidden för att dölja överflödig innehåll */
+  margin: 2em 0;
+  }
+  
+  .container {
+  padding-right: 2em;
+  padding-left: 2em;
+  }
+  
+  #product-slider-wrapper {
   margin: 2em 0;
   text-align: center;
   position: relative;
-}
-
-h1 {
-  text-transform: uppercase;
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+  }
+  
+  #product-slider-wrapper .slider-controls {
+  transition: all .25s ease-in-out;
+  padding-top: 20%;
+  position: relative;
+  float: left;
+  width: 5.5%;
+  left: 0;
+  }
+  
+  #product-slider-wrapper #product-slider {
   text-align: center;
-}
-
-/* Outer-container (ny klass) */
-.outer-container {
-  /* overflow: hidden; */
+  float: left;
+  width: 89%;
+  }
+  
+  #product-slider-wrapper h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+  }
+  
+  /* Outer-container */
+  .product-row .outer-container {
+  overflow: hidden;
   position: relative;
   width: 100%;
-}
-
-/* Inner-container (ny klass) */
-.inner-container {
+  }
+  
+  /* Inner-container */
+  .product-row .inner-container {
   display: flex;
-  width: 100%; /* Bredden justeras automatiskt efter innehållet */
   transition: transform 0.3s ease-in-out;
-  transform: translate3d(0, 0, 0); /* Se till att den animeras rätt */
-}
-
-.each-item {
+  width: calc(157px * 7); /* 157px är bredden av varje bild */
+  }
+  
+  /* Justera varje item */
+  .each-item {
   width: 157px;
-  margin-right: 1em;
-}
-
-#product-slider .product {
+  margin-right: 1em; /* Avstånd mellan bilderna */
+  }
+  
+  #product-slider .product {
   flex: 0 0 auto;
   position: relative;
   text-align: center;
   background-color: transparent;
-  margin-right: 1em;
-  justify-content: center;
   overflow: visible;
-}
-
-#product-slider .product:nth-child(1),
-#product-slider .product:nth-child(2),
-#product-slider .product:nth-child(3) {
-  width: 157px;
-  height: 329.27px;
   display: flex;
-  align-items: flex-end;
-}
-
-#product-slider .product:not(:nth-child(-n+3)) {
-  width: 157px;
-  height: 368.78px;
-}
-
-#product-slider .product:not(:nth-child(-n+3)) img {
-  width: 98.91px;
-  height: 341.06px;
-}
-
-#product-slider .product img {
-  transition: transform 0.3s ease;
-}
-
-/* Animation för att få bilden att sväva vid hover */
-#product-slider .product:hover img {
-  animation: float 2s ease-in-out infinite; /* Lägg till sväva-animationen vid hover */
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+  flex-direction: column; /* Lägg till detta för att placera skuggan under bilden */
+  justify-content: flex-end; /* Justera så att bilden ligger längst ner */
+  height: 400px; /* Öka höjden för att ge mer utrymme */
   }
-  50% {
-    transform: translateY(-10px);
+  
+  #product-slider-wrapper #product-slider .product-image {
+  max-width: 63%;
   }
-}
-
-.shadow {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  
+  #product-slider .each-item a .product-image {
+  transform: translateY(12px);
+  }
+  
+  #product-slider-wrapper #product-slider .shadow {
+  position: relative;
+  bottom: 0;
   opacity: 0.35;
-  z-index: -1;
-}
-
-.shadow img {
+  }
+  
+  #product-slider-wrapper #product-slider .shadow img {
   width: 100%;
-  height: auto;
-}
-
-/* Pilstyling */
-.slider-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 10;
-  width: 2em;
-}
-
-.prev {
+  }
+  
+  /* Animation för hover */
+  #product-slider .product:hover img {
+  animation: float 2s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  }
+  
+  .prev {
   left: 1em;
-}
-
-.next {
+  }
+  
+  .next {
   right: 1em;
-}
-
-/* Video section */
-.videos {
+  }
+  
+  /* Video section */
+  .videos {
   width: 100%;
   padding: 50px;
   font-size: 2rem;
@@ -342,156 +343,165 @@ h1 {
   background-color: #d0dae6;
   display: flex;
   flex-direction: column;
-}
-
-.videos h2 {
+  }
+  
+  .videos h2 {
   padding-bottom: 100px;
-}
-
-iframe {
-  margin: 20px;
-}
-
-.videos-row {
+  }
+  
+  iframe {
+    margin: 20px;
+  }
+  
+  .videos-row {
   display: flex;
+    justify-content: center; /* Centrera videorna */
+    flex-wrap: wrap; /* Tillåt wrap */
   margin-bottom: 20px;
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  padding-bottom: 56.25%;
-  position: relative;
-  flex-wrap: wrap; /* Flexibel för små skärmar */
-}
-
-.video-thumbnail {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: 56.25%;
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-}
-
-.item-play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-
-.item-play img {
-  width: 40px;
-}
-
-/* Footer section */
-footer {
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 56.25%;
+    position: relative;
+    flex-wrap: wrap;
+    /* Flexibel för små skärmar */
+  }
+  
+  .video-thumbnail {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    
+  .video-item {
+    margin: 10px; /* Avstånd mellan videor */
+    flex: 1 1 300px; /* Gör videorna flexibla */
+    max-width: 100%; /* Gör dem responsiva */
+  }
+  
+  
+  
+  
+  
+  
+  /* Footer section */
+  footer {
   background-color: #d0dae6;
   width: 100%;
   padding: 64px 0;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Justera innehållet till vänster */
-  margin: 0 5%;
-  padding: 0 5%;
-}
-
-#footer-logo {
-  width: 100%;
-  max-width: 190px;
-  margin-bottom: 1em; /* Avstånd under loggan */
-}
-
-.footer-text {
-  width: 100%;
-  max-width: 1180.81px; /* Maximal bredd för texten */
-  color: #282f54;
-}
-
-.footer-text p {
-  margin: 0; /* Ta bort standardmarginal */
-  margin-bottom: 17.12px; /* Avstånd mellan paragrafer */
-}
-
-.footer-text p:last-child {
-  margin-bottom: 0; /* Ingen extra marginal på sista paragrafen */
-}
-
-.footer-text a {
-  color: #003f75;
-}
-
-
-/* Media queries */
-
-/* För mobila enheter */
-@media screen and (max-width: 768px) {
-  header ul {
-    margin: 0;
-    margin-top: .6em;
-    margin-bottom: .2em;
-  }
-
-  header .navigation ul li {
-    text-align: center;
-    width: 100%;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    align-items: center; /* Centrera innehållet */
-    padding: 0 20px; /* Padding för små skärmar */
-  }
-
-  #footer-logo {
-    margin-bottom: 20px;
-  }
-
-  .footer-text {
-    text-align: center; /* Centrera texten */
-    max-width: none; /* Ta bort maxbredd */
-  }
-}
-  .footer-text {
-    text-align: left; /* Vänsterjustera texten på desktop */
   }
   
-/* För surfplattor */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Justera innehållet till vänster */
+  margin: 0 5%;
+  padding: 0 5%;
+  }
+  
+  #footer-logo {
+  width: 100%;
+  max-width: 190px;
+  margin-bottom: 1em;
+  /* Avstånd under loggan */
+  }
+  
+  .footer-text {
+  width: 100%;
+  max-width: 1180.81px;
+  /* Maximal bredd för texten */
+  color: #282f54;
+  }
+  
+  .footer-text p {
+  margin: 0;
+  /* Ta bort standardmarginal */
+  margin-bottom: 17.12px;
+  /* Avstånd mellan paragrafer */
+  }
+  
+  .footer-text p:last-child {
+  margin-bottom: 0;
+  /* Ingen extra marginal på sista paragrafen */
+  }
+  
+  .footer-text a {
+  color: #003f75;
+  }
+  
+  /* Media queries */
+  
+  /* För mobila enheter */
+  @media screen and (max-width: 768px) {
+  header ul {
+  margin: 0;
+  margin-top: .6em;
+  margin-bottom: .2em;
+  }
+  
+  header .navigation ul li {
+  text-align: center;
+  width: 100%;
+  }
+  
+  .footer-container {
+  flex-direction: column;
+  align-items: center;
+  /* Centrera innehållet */
+  padding: 0 20px;
+  /* Padding för små skärmar */
+  }
+  
+  #footer-logo {
+  margin-bottom: 20px;
+  }
+  
+  .footer-text {
+  text-align: center;
+  /* Centrera texten */
+  max-width: none;
+  /* Ta bort maxbredd */
+  }
+  }
+  
+  .footer-text {
+  text-align: left;
+  /* Vänsterjustera texten på desktop */
+  }
+  
+  /* För surfplattor */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .navigation ul {
-    padding: 0;
-    margin: 0;
-    float: auto;
-    width: 100%;
+  padding: 0;
+  margin: 0;
+  float: auto;
+  width: 100%;
   }
-
+  
   header .navigation ul li:nth-child(odd) {
-    background: #f4f8fa;
+  background: #f4f8fa;
   }
-}
-
-/* För större skärmar */
-@media screen and (min-width: 1025px) {
+  }
+  
+  @media screen and (max-width: 1034px) {
+  header .navigation ul li a {
+  text-align: center;
+  padding: 1em;
+  }
+  
+  header .navigation ul li:nth-child(odd) {
+  background: #f4f8fa;
+  }
+  }
+  
+  /* För större skärmar */
+  @media screen and (min-width: 1025px) {
   header .navigation {
-    display: block;
+  display: block;
   }
-
-  .hamburger {
-    display: none !important;
   }
-
-  .redcross .redcross-text {
-    float: left;
-    margin-right: 2%;
-    width: 57.5%;
   }
-
-  .redcross .redcross-image:last-of-type {
-    margin-right: 0;
-  }
-}
-
