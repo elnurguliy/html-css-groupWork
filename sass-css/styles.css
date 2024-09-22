@@ -5,13 +5,33 @@
   text-decoration: none;
   font-family: Reddit Sans Condensed, sans-serif;
   box-sizing: border-box;
+  color: #282f54;
+}
+
+
+main {
+  margin-bottom: 4em;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 81em;
+}
+
+
+html,
+body {
+  overflow-x: hidden;
+  /* Förhindrar horisontellt scrollande */
 }
 
 .wrapper {
-  max-width: 1450px; /* Max bredd för innehållet */
-  margin: 0 auto; /* Centrera wrappern */
-  padding: 20px; /* Valfri padding */
+  max-width: 1350px;
+  /* Max bredd för innehållet */
+  margin: 0 auto;
+  /* Centrera wrappern */
+  padding: 20px;
+  /* Valfri padding */
 }
+
 
 /* Header Styles */
 header {
@@ -19,20 +39,24 @@ header {
   position: relative;
   z-index: 100;
   width: 100%;
+  margin-bottom: -30px;
 }
 
 /* Container */
-header .container {
+.top-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 0; /* Placerar den högst upp */
-  width: 100%; /* Gör den full bredd */
-  background: #fff; /* Se till att bakgrunden är vit så att texten är läsbar */
-  z-index: 100; /* Ser till att den ligger ovanpå annat innehåll */
-  padding-top: 1em;
-  padding-right: 4em;
-  padding-left: 4em;
+  /* Placerar den högst upp */
+  width: 100%;
+  /* Gör den full bredd */
+  background: #fff;
+  /* Se till att bakgrunden är vit så att texten är läsbar */
+  z-index: 100;
+  /* Ser till att den ligger ovanpå annat innehåll */
+  padding: 0;
+  max-width: 1350px;
+
 }
 
 .scrolled header .navigation ul {
@@ -42,19 +66,23 @@ header .container {
 }
 
 /* Ramlösa logotype */
-header .container a img#logotype {
-  display: block;
-  float: inline-start;
+/* Standardstorlek för desktop */
+header .logo img {
   width: 240px;
-  height: auto;
-  width: 100%;
+  padding-left: 5em;
+  width: 17em;
+  /* Justera storleken för desktop här */
+  transition: width 0.3s ease;
+  /* Smidig övergång när storleken ändras */
 }
+
 
 /* Meny */
 header .menu {
   margin-left: auto;
   display: flex;
   align-items: center;
+  padding-right: 1em;
 }
 
 header .menu ul li {
@@ -71,7 +99,10 @@ header .navigation {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  white-space: nowrap; /* Hindrar texten från att brytas på flera rader */
+  white-space: nowrap;
+  /* Hindrar texten från att brytas på flera rader */
+  padding-right: 2em;
+
 }
 
 header .navigation ul {
@@ -89,7 +120,8 @@ header .navigation ul li a {
   padding-right: 1em;
   font-size: 1.25em;
   color: #95c7ed;
-  white-space: nowrap; /* Håller ihop texten för att undvika radbrytningar */
+  white-space: nowrap;
+  /* Håller ihop texten för att undvika radbrytningar */
 }
 
 header .navigation ul li:last-child {
@@ -146,11 +178,25 @@ header .navigation ul li a#facebook-link {
   margin: 0 auto;
 }
 
+/* Standard layout för sektionen */
+.main-1 {
+  transition: margin-top 0.3s ease;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* När menyn är aktiv, skjuts innehållet ner */
+.menu-active .main-1 {
+  margin-top: 500px;
+  /* Justera beroende på menyns höjd */
+}
+
 .embed-1-container {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   position: relative;
+  padding-top: 5em;
   padding-bottom: 56.25%;
 }
 
@@ -158,31 +204,32 @@ header .navigation ul li a#facebook-link {
   position: absolute;
   top: 0;
   left: 0;
-  width: 97%;
+  margin: 0;
+  width: 100%;
   height: 100%;
   border: 0;
 }
 
 /* Article and the redcross section */
 .redcross {
-  padding: 4em 3.6em 0;
+
+  padding: 64px 58px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  /* Flexibel layout för olika skärmstorlekar */
+  flex-wrap: wrap; /* Flexibel layout för olika skärmstorlekar */
 }
 
 .redcross h1 {
   text-align: left;
   font-size: 2.5rem;
   letter-spacing: .03em;
-  padding-bottom: 30px;
+  padding-bottom: 0.5em;
 }
 
 .redcross p {
   margin-top: 20px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .redcross-text {
@@ -192,11 +239,22 @@ header .navigation ul li a#facebook-link {
   text-align: left;
 }
 
+.redcross-text a {
+  padding-top: 1em;
+}
+
 @media screen and (min-width: 1035px) {
   .redcross .redcross-text {
-      float: left;
-      margin-right: 2%;
-      width: 57.5%;
+    float: left;
+    margin-right: 2%;
+    width: 57.5%;
+
+  }
+}
+
+@media screen and (max-width: 1035) {
+  .redcross {
+      padding: 16px 32px;
   }
 }
 
@@ -218,20 +276,24 @@ p {
 #redcross-image {
   width: 100%;
   max-width: 458px;
+  padding-top: 2em;
+  padding-bottom: 3em;
 }
 
 /* Product Slider section */
 #product-slider {
   display: flex;
-  justify-content: flex-start; /* Ändra till flex-start för att justera bilderna */
+  justify-content: flex-start;
+  /* Ändra till flex-start för att justera bilderna */
   align-items: center;
   transition: transform 0.3s ease-in-out;
   flex-wrap: nowrap;
-  overflow: hidden; /* Ändra till hidden för att dölja överflödig innehåll */
+  overflow: hidden;
+  /* Ändra till hidden för att dölja överflödig innehåll */
   margin: 2em 0;
 }
 
-.container {
+.slider-container {
   padding-right: 2em;
   padding-left: 2em;
 }
@@ -244,17 +306,17 @@ p {
 
 #product-slider-wrapper .slider-controls {
   transition: all .25s ease-in-out;
-  padding-top: 20%;
-  position: relative;
-  float: left;
   width: 5.5%;
-  left: 0;
+  position: absolute; /* Absolut positionering i förhållande till föräldern */
+  top: 500%; /* Centrera vertikalt */
+  transform: translateY(-50%); /* Flytta pilarna upp med 50% av sin höjd för att få exakt centrering */
+  z-index: 2; /* Sätt z-index så att de visas över bilderna */
 }
 
 #product-slider-wrapper #product-slider {
   text-align: center;
   float: left;
-  width: 89%;
+  width: 100%;
 }
 
 #product-slider-wrapper h1 {
@@ -272,15 +334,21 @@ p {
 
 /* Inner-container */
 .product-row .inner-container {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-  width: calc(157px * 7); /* 157px är bredden av varje bild */
+  width: 4082px; /* Behåll samma bredd */
+  left: 0; /* Om nödvändigt, kan du behöva justera */
+  display: flex; /* Flexbox aktivt */
+  transition: all 0.3s ease-in-out; /*För övergångar */
+  transform: translate3d(60px, 0px, 0px); /* Om det behövs */
+  width: calc(157px * 7 + 3em * 6); /* 7 bilder + marginaler */
 }
+
+
 
 /* Justera varje item */
 .each-item {
   width: 157px;
-  margin-right: 1em; /* Avstånd mellan bilderna */
+  margin: 0 3px; /* Justera marginaler för att skapa avstånd */
+  /* Avstånd mellan bilderna */
 }
 
 #product-slider .product {
@@ -319,21 +387,55 @@ p {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .prev {
   left: 1em;
 }
 
-.next {
-  right: 1em;
+/* Media queries for slider controls (arrows) to be responsive at different screen sizes */
+@media screen and (max-width: 450px) {
+  #product-slider-wrapper .slider-controls {
+      top: 500%; /* Centrera vertikalt även för små skärmar */
+      transform: translateY(-50%);
+  }
 }
 
+/* Justera positionen för skärmar mellan 450px och 1200px */
+@media screen and (max-width: 1200px) {
+  #product-slider-wrapper .slider-controls {
+      top: 500%; /* Fortsätt centrera vertikalt */
+      transform: translateY(-50%);
+  }
+}
+
+/* För mindre skärmar, 502px och nedåt */
+@media screen and (max-width: 502px) {
+  #product-slider-wrapper .slider-controls {
+    top: 350%; /* Justera top-värdet för att hålla pilarna vid bilderna */
+    transform: translateY(-50%); /* Centrera dem vertikalt */
+  }
+}
+
+/* För ännu mindre skärmar, 276px och nedåt */
+@media screen and (max-width: 276px) {
+  #product-slider-wrapper .slider-controls {
+    top: 250%; /* Justera top-värdet för att hålla pilarna vid bilderna */
+    transform: translateY(-50%); /* Centrera dem vertikalt */
+  }
+}
+
+/* Video section */
 .videos {
   width: 100%;
-  padding: 50px;
   font-size: 2rem;
   color: white;
   text-align: center;
@@ -344,39 +446,37 @@ p {
 }
 
 .videos h2 {
-  padding-bottom: 100px;
+  padding-bottom: 5%;
+  color: #fff;
+  padding-top: 5%;
+}
+
+iframe {
+  margin: 20px;
 }
 
 .videos-row {
   display: flex;
-  justify-content: center; /* Centrera videorna */
-  flex-wrap: wrap; /* Tillåt wrap */
+  justify-content: center;
+  /* Centrera videorna */
+  flex-wrap: wrap;
+  /* Tillåt wrap */
   margin-bottom: 20px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  flex-wrap: wrap;
+  /* Flexibel för små skärmar */
 }
 
-.video-item {
-  margin: 10px; /* Avstånd mellan videor */
-  flex: 1 1 300px; /* Gör videorna flexibla */
-  max-width: 100%; /* Gör dem responsiva */
-}
 
-.video-item iframe {
-  width: 100%; /* Gör iframes responsiva */
-  height: auto; /* Håller aspect ratio */
-}
 
-@media (max-width: 768px) {
-  .videos {
-    padding: 30px; /* Minska padding på små skärmar */
-    font-size: 1.5rem; /* Minska fontstorlek */
-  }
-
+@media screen and (max-width: 1034) {
   .videos h2 {
-    padding-bottom: 50px; /* Minska avstånd under rubriken */
+    font-size: 2em;
   }
 }
-
-
 
 
 /* Footer section */
@@ -384,29 +484,24 @@ footer {
   background-color: #d0dae6;
   width: 100%;
   padding: 64px 0;
-}
-
-.footer-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  /* Justera innehållet till vänster */
-  margin: 0 5%;
-  padding: 0 5%;
+  justify-content: center;
 }
 
-#footer-logo {
+
+.footer-logo {
   width: 100%;
   max-width: 190px;
   margin-bottom: 1em;
-  /* Avstånd under loggan */
+  display: block;
 }
 
+
 .footer-text {
-  width: 100%;
-  max-width: 1180.81px;
   /* Maximal bredd för texten */
   color: #282f54;
+  max-width: 1180px;
+  width: 100%;
 }
 
 .footer-text p {
@@ -414,6 +509,7 @@ footer {
   /* Ta bort standardmarginal */
   margin-bottom: 17.12px;
   /* Avstånd mellan paragrafer */
+  font-weight: 500;
 }
 
 .footer-text p:last-child {
@@ -481,12 +577,12 @@ footer {
 
 @media screen and (max-width: 1034px) {
   header .navigation ul li a {
-      text-align: center;
-      padding: 1em;
+    text-align: center;
+    padding: 1em;
   }
 
   header .navigation ul li:nth-child(odd) {
-      background: #f4f8fa;
+    background: #f4f8fa;
   }
 }
 
@@ -494,5 +590,11 @@ footer {
 @media screen and (min-width: 1025px) {
   header .navigation {
     display: block;
+  }
+}
+
+@media screen and (max-width: 1034px) {
+  .container {
+    padding: 0 1em;
   }
 }

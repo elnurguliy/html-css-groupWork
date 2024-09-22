@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <html lang="sv">
 
 <head>
@@ -22,24 +23,34 @@
 
     <link rel="icon" type="image/png" href="https://ramlosa.se/resources/images/favicons/favicon-16x16.png"
         sizes="16x16">
+
+
 </head>
 
 
 <body class="scrolled" data-layout-id="1">
-
         <header>
-            <div class="container">
+            <div class="top-container">
                 <div class="logo">
-                    <a href="#">
-                        <img id="logotype" src="../images/ramlosa_logo.svg" alt="Ramlösa logotype">
-                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="../images/ramlosa_logo.svg" alt="Ramlösa logotyp">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
                 <div class="menu">
-                    <button class="hamburger hamburger--elastic" type="button">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
+                    <ul>
+                        <li>
+                            <button class="hamburger hamburger--elastic" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="navigation">
@@ -118,14 +129,14 @@
             <section id="product-slider-wrapper">
                 <h1>Vilken är din favorit?</h1>
 
-                <div class="container">
+                <div class="slider-container">
                     <a href="#prev" class="slider-controls prev"><img src="../images/arrow_left_blue.png"
-                            alt="Previous"></a>
+                            alt="Previous">
+                    </a>
 
                     <div id="product-slider" class="product-row" style="opacity: 1; display: block;">
                         <div class="outer-container">
-                            <div class="inner-container"
-                                style="width: 4082px; left: 0px; display: flex; transition: all; transform: translate3d(0px, 0px, 0px);">
+                            <div class="inner-container">
                                 <div class="each-item" style="width: 157px;">
                                     <div class="product">
                                         <a href="https://ramlosa.se/produkter/premium-original">
@@ -318,56 +329,59 @@
 
             <section class="videos">
                 <h2>SE VÅRA REKLAMFILMER</h2>
-                <div class="videos-row">
-                    <iframe class="video-item" width="560" height="315"
-                        src="https://www.youtube.com/embed/T88inlotu9c?si=CF2XQwGOstjfeNXD" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
+                <div class="video-row">
+                    <div class="videos-row">
+                        <iframe class="video-item" width="560" height="315"
+                            src="https://www.youtube.com/embed/T88inlotu9c?si=CF2XQwGOstjfeNXD"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
 
-                    <iframe class="video-item" width="560" height="315"
-                        src="https://www.youtube.com/embed/_GVfc9BIdL0?si=VUiW78I3O-Ok-RDK" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
+                        <iframe class="video-item" width="560" height="315"
+                            src="https://www.youtube.com/embed/_GVfc9BIdL0?si=VUiW78I3O-Ok-RDK"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
 
-                    <iframe class="video-item" width="560" height="315"
-                        src="https://www.youtube.com/embed/uzBPb6L2yvA?si=SxylIbmm4ZaXLBLN" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
+                        <iframe class="video-item" width="560" height="315"
+                            src="https://www.youtube.com/embed/uzBPb6L2yvA?si=SxylIbmm4ZaXLBLN"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
             </section>
 
 
 
             <!-- <script>
-            // Funktion för att öppna video
-            document.querySelectorAll('.video-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    const videoId = item.getAttribute('data-video-id');
-                    const iframe = document.getElementById('video-frame');
-                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-                    document.getElementById('video-overlay').style.display = 'flex';
-                });
-            });
+           // Funktion för att öppna video
+           document.querySelectorAll('.video-item').forEach(item => {
+               item.addEventListener('click', () => {
+                   const videoId = item.getAttribute('data-video-id');
+                   const iframe = document.getElementById('video-frame');
+                   iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                   document.getElementById('video-overlay').style.display = 'flex';
+               });
+           });
 
-            // Funktion för att stänga video
-            document.querySelector('.close-btn').addEventListener('click', () => {
-                const iframe = document.getElementById('video-frame');
-                iframe.src = ''; // Stoppa videon
-                document.getElementById('video-overlay').style.display = 'none';
-            });
-        </script> -->
+           // Funktion för att stänga video
+           document.querySelector('.close-btn').addEventListener('click', () => {
+               const iframe = document.getElementById('video-frame');
+               iframe.src = ''; // Stoppa videon
+               document.getElementById('video-overlay').style.display = 'none';
+           });
+       </script> -->
 
         </main>
+
+    </div>
     <footer>
         <div class="footer-container">
-            <a href="https://ramlosa.se/">
-                <img id="footer-logo" src="../images/ramlosa_logo.svg" alt="Ramlösa Logo">
+            <a href="https://ramlosa.se/"></a>
+            <img class="footer-logo" src="../images/ramlosa_logo.svg" alt="Ramlösa Logo">
             </a>
             <div class="footer-text">
                 <p>
@@ -389,10 +403,12 @@
                     Carlsberg Sverige, Konsumentservice/Ramlösa, Box 3040, 169 03 Solna
                 </p>
             </div>
-        </div>
     </footer>
 
     <script>
+    
+    const body = document.body; // Vi lägger till klassen på body
+
         document.addEventListener("DOMContentLoaded", function () {
             const hamburger = document.querySelector(".hamburger");
             const header = document.querySelector("header");
@@ -400,6 +416,7 @@
             if (hamburger) {
                 hamburger.addEventListener("click", function () {
                     hamburger.classList.toggle("is-active");
+                    body.classList.toggle("menu-active"); 
                     header.classList.toggle("active");
                 });
             } else {
@@ -408,6 +425,24 @@
         });
     </script>
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector("header");
+            const shadowClass = "shadow";
+
+            function handleScroll() {
+                if (window.scrollY > 0) {
+                    header.classList.add(shadowClass);
+                } else {
+                    header.classList.remove(shadowClass);
+                }
+            }
+
+            window.addEventListener("scroll", handleScroll);
+            handleScroll(); // Initial check in case user is already scrolled down
+        });
+    </script>
 </body>
 
 </html>

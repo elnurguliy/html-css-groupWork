@@ -1,187 +1,187 @@
 /* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: Reddit Sans Condensed, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  /* Header Styles */
-  header {
-    background: #fff;
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-  
-  /* Container */
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 0 10%; /* Flexibel padding för att anpassa skärmstorlek */
-    max-width: 100%;
-    width: 100%; /* Gör container responsiv */
-    max-width: 81em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Navigation */
-  header .navigation ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-left: 0;
-    margin-left: 2%;
-  }
-  
-  header .navigation ul li {
-    display: inline-block;
-    margin-right: 2%; /* Procentbaserad marginal */
-    font-size: 1em;
-    font-weight: 400;
-  }
-  
-  header .navigation ul li:last-child {
-    margin-right: 0;
-  }
-  
-  header .navigation ul li a {
-    padding-left: 1em;
-    font-size: 1em;
-    font-weight: 500;
-    color: #95c7ed;
-  }
-  
-  /* Facebook Ikon */
-  header .navigation ul li a#facebook-link {
-    display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0;
-    vertical-align: middle;
-  }
-  
-  /* Hamburgermeny */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Reddit Sans Condensed, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  background: #fff;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10%; /* Flexibel padding för att anpassa skärmstorlek */
+  max-width: 100%;
+  width: 100%; /* Gör container responsiv */
+  max-width: 81em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Navigation */
+header .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0;
+  margin-left: 2%;
+}
+
+header .navigation ul li {
+  display: inline-block;
+  margin-right: 2%; /* Procentbaserad marginal */
+  font-size: 1em;
+  font-weight: 400;
+}
+
+header .navigation ul li:last-child {
+  margin-right: 0;
+}
+
+header .navigation ul li a {
+  padding-left: 1em;
+  font-size: 1em;
+  font-weight: 500;
+  color: #95c7ed;
+}
+
+/* Facebook Ikon */
+header .navigation ul li a#facebook-link {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* Hamburgermeny */
+header .menu {
+  display: none;
+}
+
+header .menu ul li {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Media Query för Responsivitet */
+@media (max-width: 768px) {
   header .menu {
+    display: block;
+  }
+
+  header .navigation {
     display: none;
   }
-  
-  header .menu ul li {
-    vertical-align: middle;
-    display: inline-block;
+
+  .container {
+    padding: 0 5%; /* Mer padding för mindre skärmar */
   }
-  
-  /* Media Query för Responsivitet */
-  @media (max-width: 768px) {
-    header .menu {
-      display: block;
-    }
-  
-    header .navigation {
-      display: none;
-    }
-  
-    .container {
-      padding: 0 5%; /* Mer padding för mindre skärmar */
-    }
-  
-    /* När hamburgermenyn är aktiv */
-    header.active .navigation {
-      display: block;
-      position: absolute;
-      top: 100px;
-      left: 0;
-      width: 100%;
-      background-color: white;
-    }
-  
-    header .navigation ul {
-      flex-direction: column;
-    }
-  
-    header .navigation ul li {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
-  
-  /* Hamburger Menu */
-  .hamburger {
-    padding-right: 0;
-    padding: 15px 15px;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .hamburger-inner {
+
+  /* När hamburgermenyn är aktiv */
+  header.active .navigation {
     display: block;
-    margin-top: -2px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: white;
   }
-  
-  .hamburger--elastic .hamburger-inner {
-    top: 2px;
+
+  header .navigation ul {
+    flex-direction: column;
   }
-  
-  .hamburger-box {
-    width: 40px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
+
+  header .navigation ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
-  
-  .hamburger .hamburger-inner {
-    background: #003f75;
-  }
-  
-  .hamburger-inner,
-  .hamburger-inner::after,
-  .hamburger-inner::before {
-    width: 40px;
-    height: 4px;
-  }
-  
-  /* Ramlösa logo */
-  #logotype {
-    width: 100%; /* Flexibel logobredd */
-    max-width: 240px;
-    height: auto;
-    padding-top: 50px;
-  }
-  
-  .title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .contact-content {
-    margin: 0 auto;
-    max-width: 100%;
-    color: #282f54;
-    font-weight: 600;
-  }
-  
-  .contact-content p {
-    margin: 0px 0px 17px;
-    font-size: 1.2em;
-  }
-  
-  h1 {
-    margin: 32px 32px 32px 32px;
-    font-size: 48px;
-    color: #282f54;
-  }
-  
-  h2 {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 32px;
-  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  padding-right: 0;
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hamburger-inner {
+  display: block;
+  margin-top: -2px;
+}
+
+.hamburger--elastic .hamburger-inner {
+  top: 2px;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger .hamburger-inner {
+  background: #003f75;
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  width: 40px;
+  height: 4px;
+}
+
+/* Ramlösa logo */
+#logotype {
+  width: 100%; /* Flexibel logobredd */
+  max-width: 240px;
+  height: auto;
+  padding-top: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.contact-content {
+  margin: 0 auto;
+  max-width: 100%;
+  color: #282f54;
+  font-weight: 600;
+}
+
+.contact-content p {
+  margin: 0px 0px 17px;
+  font-size: 1.2em;
+}
+
+h1 {
+  margin: 32px 32px 32px 32px;
+  font-size: 48px;
+  color: #282f54;
+}
+
+h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 32px;
+}
