@@ -1,3 +1,30 @@
+.videos-row,
+header {
+  justify-content: center;
+}
+.top-container,
+header {
+  display: flex;
+  background: #fff;
+  z-index: 100;
+}
+header .menu ul li,
+header .navigation ul li a#facebook-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+#video-1,
+header {
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+.footer-text a,
+.redcross-text a {
+  text-decoration: underline;
+  font-style: italic;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,96 +33,65 @@
   font-family: Reddit Sans Condensed, sans-serif;
   box-sizing: border-box;
 }
-
-
 main {
   margin-bottom: 4em;
   margin-right: auto;
   margin-left: auto;
   max-width: 81em;
 }
-
-
-html,
 body {
+  scroll-padding-top: 6rem;
+}
+section {
+  scroll-margin-top: 6rem;
+}
+body,
+html {
   overflow-x: hidden;
-  /* Förhindrar horisontellt scrollande */
 }
-
-/* Header Styles */
 header {
-  display: flex;
-  justify-content: center;
-  background: #fff;
-  position: relative;
-  z-index: 100;
-  width: 100%;
   margin-bottom: -30px;
+  position: fixed;
+  height: 6rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-/* Container */
 .top-container {
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Placerar den högst upp */
   width: 100%;
-  /* Gör den full bredd */
-  background: #fff;
-  /* Se till att bakgrunden är vit så att texten är läsbar */
-  z-index: 100;
-  /* Ser till att den ligger ovanpå annat innehåll */
   padding: 0;
   max-width: 1350px;
-
 }
-
+.videos,
+footer {
+  background-color: #d0dae6;
+  display: flex;
+}
 .scrolled header .navigation ul {
-  margin: 0;
-  margin-top: 1.3em;
-  margin-bottom: .6em;
+  margin: 1.3em 0 0.6em;
 }
-
-/* Ramlösa logotype */
-/* Standardstorlek för desktop */
 header .logo img {
-  width: 240px;
   padding-left: 5em;
   width: 17em;
-  /* Justera storleken för desktop här */
-  transition: width 0.3s ease;
-  /* Smidig övergång när storleken ändras */
+  transition: width 0.3s;
 }
-
-
-/* Meny */
 header .menu {
   margin-left: auto;
   display: flex;
   align-items: center;
   padding-right: 1em;
 }
-
-header .menu ul li {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-/* Navigation */
 header .navigation {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 0 2em 0 0;
   margin: 0;
   white-space: nowrap;
-  /* Hindrar texten från att brytas på flera rader */
-  padding-right: 2em;
-
 }
-
 header .navigation ul {
   display: flex;
   vertical-align: middle;
@@ -104,7 +100,6 @@ header .navigation ul {
   padding-left: 0;
   margin-left: 2%;
 }
-
 header .navigation ul li a {
   display: block;
   padding-left: 1em;
@@ -113,149 +108,110 @@ header .navigation ul li a {
   font-weight: 700;
   color: #282f54;
   white-space: nowrap;
-  /* Håller ihop texten för att undvika radbrytningar */
 }
-
 header .navigation ul li:last-child {
   margin-right: 0;
 }
-
-/* Facebook Ikon */
 header .navigation ul li a#facebook-link {
-  display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0;
-  vertical-align: middle;
 }
-
-/* Media Query för Responsivitet */
 @media (max-width: 768px) {
   header .menu {
     display: block;
+    padding-right: 1.5em;
   }
-
   header .navigation {
     display: none;
   }
-
   .container {
     padding: 0 5%;
-    /* Mer padding för mindre skärmar */
   }
-
-  /* När hamburgermenyn är aktiv */
   header.active .navigation {
     display: block;
     position: absolute;
     top: 100px;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: #fff;
   }
-
   header .navigation ul {
     flex-direction: column;
   }
-
   header .navigation ul li {
     margin-right: 0;
     margin-bottom: 10px;
   }
 }
-
-/* The video at the top */
 .main-1 {
-  max-width: 100%;
   margin: 0 auto;
-}
-
-/* Standard layout för sektionen */
-.main-1 {
-  transition: margin-top 0.3s ease;
+  transition: margin-top 0.3s;
   max-width: 100%;
-  margin: 0 auto;
 }
-
-/* När menyn är aktiv, skjuts innehållet ner */
 .menu-active .main-1 {
   margin-top: 500px;
-  /* Justera beroende på menyns höjd */
 }
-
 .embed-1-container {
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 57px auto;
   position: relative;
   padding-top: 5em;
   padding-bottom: 56.25%;
 }
-
+@media (max-width: 640px) {
+  .embed-1-container {
+    margin: 56px auto;
+  }
+}
 #video-1 {
   position: absolute;
-  top: 0;
-  left: 0;
   margin: 0;
-  width: 100%;
   height: 100%;
   border: 0;
 }
-
-/* Article and the redcross section */
 .redcross {
   color: #282f54;
-  padding: 64px 58px 0;
+  padding: 0 58px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* Flexibel layout för olika skärmstorlekar */
 }
-
 .redcross h1 {
   text-align: left;
   font-size: 2.5rem;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   padding-bottom: 0.5em;
 }
-
 .redcross p {
   margin-top: 20px;
   font-weight: 600;
   font-size: 1.25em;
 }
-
 .redcross-text {
   float: left;
   width: 100%;
   max-width: 100%;
   text-align: left;
 }
-
 .redcross-text a {
   display: block;
   padding-top: 1em;
-  text-decoration: underline;
-  font-style: italic;
- 
 }
-
-@media screen and (min-width: 1035px) {
+@media (min-width: 1035px) {
   .redcross .redcross-text {
     float: left;
     margin-right: 2%;
     width: 57.5%;
-
   }
 }
-
-@media screen and (max-width: 1035) {
+@media (max-width: 1035) {
   .redcross {
     padding: 16px 32px;
   }
 }
-
 dd,
 dt,
 li:not(.navigation-item),
@@ -265,114 +221,81 @@ p {
   font-size: 1.07em;
   text-rendering: geometricPrecision;
 }
-
 #redcross-image {
   width: 100%;
   max-width: 458px;
   padding-top: 2em;
   padding-bottom: 3em;
 }
-
-/* Product Slider section */
 #product-slider {
   display: flex;
   justify-content: flex-start;
-  /* Ändra till flex-start för att justera bilderna */
   align-items: center;
   transition: transform 0.3s ease-in-out;
   flex-wrap: nowrap;
   overflow: hidden;
-  /* Ändra till hidden för att dölja överflödig innehåll */
   margin: 2em 0;
   display: flex;
   scroll-behavior: smooth;
-  /* För att få mjuk scroll */
 }
-
 .slider-container {
   padding-right: 2em;
   padding-left: 2em;
 }
-
 #product-slider-wrapper {
   margin: 2em 0;
   position: relative;
 }
-
 #product-slider-wrapper .slider-controls {
-  transition: all .25s ease-in-out;
+  transition: 0.25s ease-in-out;
   width: 5.5%;
   position: absolute;
-  /* Absolut positionering i förhållande till föräldern */
   top: 500%;
-  /* Centrera vertikalt */
   transform: translateY(-50%);
-  /* Flytta pilarna upp med 50% av sin höjd för att få exakt centrering */
   z-index: 2;
-  /* Sätt z-index så att de visas över bilderna */
 }
-
 #product-slider-wrapper .slider-controls.prev {
   left: 1em;
-  /* Placera vänstra pilen på vänster sida */
 }
-
 #product-slider-wrapper .slider-controls img {
   width: 40px;
-  /* Justera storleken på pilarna */
   height: 40px;
   cursor: pointer;
 }
-
-
-
-
 #product-slider-wrapper #product-slider {
   text-align: center;
   float: left;
   width: 100%;
 }
-
 #product-slider-wrapper h1 {
   text-transform: uppercase;
   text-align: center;
   font-size: 3em;
   color: #282f54;
 }
-
-/* Outer-container */
 .product-row .outer-container {
   overflow: hidden;
   position: relative;
   width: 100%;
   width: calc(157px * 7 + 3em * 6);
-  /* Visar exakt 7 bilder med marginaler */
   margin: 0 auto;
-  /* Centrera slidern */
 }
-
-/* Inner-container */
 .product-row .inner-container {
   width: 4082px;
-  /* Behåll samma bredd */
   left: 0;
-  /* Om nödvändigt, kan du behöva justera */
   display: flex;
-  /* Flexbox aktivt */
   transition: transform 0.3s ease-in-out;
-  /* Lägg till en smidig övergång */
 }
-
-
-
-/* Justera varje item */
 .each-item {
   width: 157px;
   margin: 0 3px;
-  /* 3px marginal ger totalt 6px mellan bilderna */
-  /* Avstånd mellan bilderna */
 }
-
+#product-slider-wrapper #product-slider .shadow img,
+.footer-text,
+.videos,
+footer {
+  width: 100%;
+}
 #product-slider .product {
   flex: 0 0 auto;
   position: relative;
@@ -381,247 +304,152 @@ p {
   overflow: visible;
   display: flex;
   flex-direction: column;
-  /* Lägg till detta för att placera skuggan under bilden */
   justify-content: flex-end;
-  /* Justera så att bilden ligger längst ner */
   height: 400px;
-  /* Öka höjden för att ge mer utrymme */
 }
-
 #product-slider-wrapper #product-slider .product-image {
   max-width: 63%;
 }
-
 #product-slider .each-item a .product-image {
   transform: translateY(12px);
 }
-
 #product-slider-wrapper #product-slider .shadow {
   position: relative;
   bottom: 0;
   opacity: 0.35;
 }
-
-#product-slider-wrapper #product-slider .shadow img {
-  width: 100%;
-}
-
-/* Animation för hover */
 #product-slider .product:hover img {
-  animation: float 2s ease-in-out infinite;
+  animation: 2s ease-in-out infinite float;
 }
-
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
 }
-
-
-/* För skärmar med en bredd på minst 1200px */
 @media screen and (min-width: 1200px) {
   #product-slider-wrapper #product-slider {
     text-align: center;
     float: left;
-    width: 95%; /* Full bredd för större skärmar */
+    width: 95%;
   }
 }
-
-/* För skärmar med en bredd mellan 758px och 1199px */
 @media screen and (max-width: 1199px) and (min-width: 758px) {
   #product-slider-wrapper #product-slider {
     text-align: center;
     float: left;
-    width: 100%; /* Mindre bredd för mellanstora skärmar */
+    width: 100%;
   }
 }
-
 @media screen and (max-width: 820px) and (min-width: 758px) {
   #product-slider-wrapper #product-slider {
     text-align: center;
     float: left;
-    width: 85%; /* Mindre bredd för mellanstora skärmar */
+    width: 85%;
   }
 }
-
-
-
-
-/* Media queries for slider controls (arrows) to be responsive at different screen sizes */
 @media screen and (max-width: 450px) {
   #product-slider-wrapper .slider-controls {
     top: 500%;
-    /* Centrera vertikalt även för små skärmar */
     transform: translateY(-50%);
   }
 }
-
-/* Justera positionen för skärmar mellan 450px och 1200px */
 @media screen and (max-width: 1200px) {
   #product-slider-wrapper .slider-controls {
     top: 500%;
-    /* Fortsätt centrera vertikalt */
     transform: translateY(-50%);
   }
 }
-
-/* För mindre skärmar, 502px och nedåt */
 @media screen and (max-width: 502px) {
   #product-slider-wrapper .slider-controls {
     top: 350%;
-    /* Justera top-värdet för att hålla pilarna vid bilderna */
     transform: translateY(-50%);
-    /* Centrera dem vertikalt */
   }
 }
-
-/* För ännu mindre skärmar, 276px och nedåt */
 @media screen and (max-width: 276px) {
   #product-slider-wrapper .slider-controls {
     top: 250%;
-    /* Justera top-värdet för att hålla pilarna vid bilderna */
     transform: translateY(-50%);
-    /* Centrera dem vertikalt */
   }
 }
-
-/* Video section */
 .videos {
-  width: 100%;
   font-size: 2rem;
-  color: white;
+  color: #fff;
   text-align: center;
   margin: 20px auto;
-  background-color: #d0dae6;
-  display: flex;
   flex-direction: column;
   padding-top: 2em;
 }
-
 .videos h2 {
   padding-bottom: 5%;
   color: #282f54;
-  
 }
-
 iframe {
   margin: 20px;
 }
-
 .videos-row {
   display: flex;
-  justify-content: center;
-  /* Centrera videorna */
   flex-wrap: wrap;
-  /* Tillåt wrap */
   margin-bottom: 20px;
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
   flex-wrap: wrap;
-  /* Flexibel för små skärmar */
 }
-
-
-
-@media screen and (max-width: 1034) {
+@media (max-width: 1034) {
   .videos h2 {
     font-size: 2em;
   }
 }
-
-
-/* Footer section */
 footer {
-  background-color: #d0dae6;
-  width: 100%;
   padding: 64px 0;
-  display: flex;
   justify-content: center;
 }
-
-
 .footer-logo {
   width: 100%;
   max-width: 190px;
   margin-bottom: 1em;
   display: block;
 }
-
-
 .footer-text {
-  /* Maximal bredd för texten */
   color: #282f54;
   max-width: 1180px;
-  width: 100%;
 }
-
 .footer-text p {
-  margin: 0;
-  /* Ta bort standardmarginal */
-  margin-bottom: 17.12px;
-  /* Avstånd mellan paragrafer */
+  margin: 0 0 17.12px;
   font-weight: 600;
 }
-
 .footer-text p:last-child {
   margin-bottom: 0;
-  /* Ingen extra marginal på sista paragrafen */
 }
-
-.footer-text a {
-    text-decoration: underline;
-    font-style: italic;
-}
-
-/* Media queries */
-
-/* För mobila enheter */
 @media screen and (max-width: 768px) {
   header ul {
-    margin: 0;
-    margin-top: .6em;
-    margin-bottom: .2em;
+    margin: 0.6em 0 0.2em;
   }
-
   header .navigation ul li {
     text-align: center;
     width: 100%;
   }
-
   .footer-container {
     flex-direction: column;
     align-items: center;
-    /* Centrera innehållet */
     padding: 0 20px;
-    /* Padding för små skärmar */
   }
-
   #footer-logo {
     margin-bottom: 20px;
   }
-
   .footer-text {
     text-align: center;
-    /* Centrera texten */
     max-width: none;
-    /* Ta bort maxbredd */
   }
 }
-
 .footer-text {
   text-align: left;
-  /* Vänsterjustera texten på desktop */
 }
-
-/* För surfplattor */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .navigation ul {
     padding: 0;
@@ -629,43 +457,38 @@ footer {
     float: auto;
     width: 100%;
   }
-
   header .navigation ul li:nth-child(odd) {
     background: #3292c2;
   }
 }
-
-@media screen and (max-width: 1034px) {
+@media (max-width: 1034px) {
   header .navigation ul li a {
     text-align: center;
     padding: 1em;
   }
-
+  @media (max-width: 1034px) {
+    .logo-header {
+      padding: 0;
+    }
+  }
   header .navigation ul li:nth-child(odd) {
     background: #c6e4f1;
   }
 }
-
-/* För större skärmar */
 @media screen and (min-width: 1025px) {
   header .navigation {
     display: block;
   }
 }
-
 @media screen and (max-width: 1034px) {
   .container {
     padding: 0 1em;
   }
-}
-
-@media screen and (max-width: 1034px) {
   header .navigation {
     padding-right: 0.7em;
     padding-left: 0.7em;
   }
 }
-
 .fblogo {
   height: 55px;
   width: 55px;
