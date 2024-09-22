@@ -23,18 +23,10 @@ body {
   /* Förhindrar horisontellt scrollande */
 }
 
-.wrapper {
-  max-width: 1350px;
-  /* Max bredd för innehållet */
-  margin: 0 auto;
-  /* Centrera wrappern */
-  padding: 20px;
-  /* Valfri padding */
-}
-
-
 /* Header Styles */
 header {
+  display: flex;
+  justify-content: center;
   background: #fff;
   position: relative;
   z-index: 100;
@@ -217,7 +209,8 @@ header .navigation ul li a#facebook-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* Flexibel layout för olika skärmstorlekar */
+  flex-wrap: wrap;
+  /* Flexibel layout för olika skärmstorlekar */
 }
 
 .redcross h1 {
@@ -254,7 +247,7 @@ header .navigation ul li a#facebook-link {
 
 @media screen and (max-width: 1035) {
   .redcross {
-      padding: 16px 32px;
+    padding: 16px 32px;
   }
 }
 
@@ -291,6 +284,9 @@ p {
   overflow: hidden;
   /* Ändra till hidden för att dölja överflödig innehåll */
   margin: 2em 0;
+  display: flex;
+  scroll-behavior: smooth;
+  /* För att få mjuk scroll */
 }
 
 .slider-container {
@@ -300,18 +296,36 @@ p {
 
 #product-slider-wrapper {
   margin: 2em 0;
-  text-align: center;
   position: relative;
 }
 
 #product-slider-wrapper .slider-controls {
   transition: all .25s ease-in-out;
   width: 5.5%;
-  position: absolute; /* Absolut positionering i förhållande till föräldern */
-  top: 500%; /* Centrera vertikalt */
-  transform: translateY(-50%); /* Flytta pilarna upp med 50% av sin höjd för att få exakt centrering */
-  z-index: 2; /* Sätt z-index så att de visas över bilderna */
+  position: absolute;
+  /* Absolut positionering i förhållande till föräldern */
+  top: 500%;
+  /* Centrera vertikalt */
+  transform: translateY(-50%);
+  /* Flytta pilarna upp med 50% av sin höjd för att få exakt centrering */
+  z-index: 2;
+  /* Sätt z-index så att de visas över bilderna */
 }
+
+#product-slider-wrapper .slider-controls.prev {
+  left: 1em;
+  /* Placera vänstra pilen på vänster sida */
+}
+
+#product-slider-wrapper .slider-controls img {
+  width: 40px;
+  /* Justera storleken på pilarna */
+  height: 40px;
+  cursor: pointer;
+}
+
+
+
 
 #product-slider-wrapper #product-slider {
   text-align: center;
@@ -330,16 +344,22 @@ p {
   overflow: hidden;
   position: relative;
   width: 100%;
+  width: calc(157px * 7 + 3em * 6);
+  /* Visar exakt 7 bilder med marginaler */
+  margin: 0 auto;
+  /* Centrera slidern */
 }
 
 /* Inner-container */
 .product-row .inner-container {
-  width: 4082px; /* Behåll samma bredd */
-  left: 0; /* Om nödvändigt, kan du behöva justera */
-  display: flex; /* Flexbox aktivt */
-  transition: all 0.3s ease-in-out; /*För övergångar */
-  transform: translate3d(60px, 0px, 0px); /* Om det behövs */
-  width: calc(157px * 7 + 3em * 6); /* 7 bilder + marginaler */
+  width: 4082px;
+  /* Behåll samma bredd */
+  left: 0;
+  /* Om nödvändigt, kan du behöva justera */
+  display: flex;
+  /* Flexbox aktivt */
+  transition: transform 0.3s ease-in-out;
+  /* Lägg till en smidig övergång */
 }
 
 
@@ -347,7 +367,8 @@ p {
 /* Justera varje item */
 .each-item {
   width: 157px;
-  margin: 0 3px; /* Justera marginaler för att skapa avstånd */
+  margin: 0 3px;
+  /* 3px marginal ger totalt 6px mellan bilderna */
   /* Avstånd mellan bilderna */
 }
 
@@ -358,9 +379,12 @@ p {
   background-color: transparent;
   overflow: visible;
   display: flex;
-  flex-direction: column; /* Lägg till detta för att placera skuggan under bilden */
-  justify-content: flex-end; /* Justera så att bilden ligger längst ner */
-  height: 400px; /* Öka höjden för att ge mer utrymme */
+  flex-direction: column;
+  /* Lägg till detta för att placera skuggan under bilden */
+  justify-content: flex-end;
+  /* Justera så att bilden ligger längst ner */
+  height: 400px;
+  /* Öka höjden för att ge mer utrymme */
 }
 
 #product-slider-wrapper #product-slider .product-image {
@@ -387,49 +411,82 @@ p {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
-  
+
   50% {
     transform: translateY(-10px);
   }
 }
 
-.prev {
-  left: 1em;
+
+/* För skärmar med en bredd på minst 1200px */
+@media screen and (min-width: 1200px) {
+  #product-slider-wrapper #product-slider {
+    text-align: center;
+    float: left;
+    width: 95%; /* Full bredd för större skärmar */
+  }
 }
+
+/* För skärmar med en bredd mellan 758px och 1199px */
+@media screen and (max-width: 1199px) and (min-width: 758px) {
+  #product-slider-wrapper #product-slider {
+    text-align: center;
+    float: left;
+    width: 100%; /* Mindre bredd för mellanstora skärmar */
+  }
+}
+
+@media screen and (max-width: 820px) and (min-width: 758px) {
+  #product-slider-wrapper #product-slider {
+    text-align: center;
+    float: left;
+    width: 85%; /* Mindre bredd för mellanstora skärmar */
+  }
+}
+
+
+
 
 /* Media queries for slider controls (arrows) to be responsive at different screen sizes */
 @media screen and (max-width: 450px) {
   #product-slider-wrapper .slider-controls {
-      top: 500%; /* Centrera vertikalt även för små skärmar */
-      transform: translateY(-50%);
+    top: 500%;
+    /* Centrera vertikalt även för små skärmar */
+    transform: translateY(-50%);
   }
 }
 
 /* Justera positionen för skärmar mellan 450px och 1200px */
 @media screen and (max-width: 1200px) {
   #product-slider-wrapper .slider-controls {
-      top: 500%; /* Fortsätt centrera vertikalt */
-      transform: translateY(-50%);
+    top: 500%;
+    /* Fortsätt centrera vertikalt */
+    transform: translateY(-50%);
   }
 }
 
 /* För mindre skärmar, 502px och nedåt */
 @media screen and (max-width: 502px) {
   #product-slider-wrapper .slider-controls {
-    top: 350%; /* Justera top-värdet för att hålla pilarna vid bilderna */
-    transform: translateY(-50%); /* Centrera dem vertikalt */
+    top: 350%;
+    /* Justera top-värdet för att hålla pilarna vid bilderna */
+    transform: translateY(-50%);
+    /* Centrera dem vertikalt */
   }
 }
 
 /* För ännu mindre skärmar, 276px och nedåt */
 @media screen and (max-width: 276px) {
   #product-slider-wrapper .slider-controls {
-    top: 250%; /* Justera top-värdet för att hålla pilarna vid bilderna */
-    transform: translateY(-50%); /* Centrera dem vertikalt */
+    top: 250%;
+    /* Justera top-värdet för att hålla pilarna vid bilderna */
+    transform: translateY(-50%);
+    /* Centrera dem vertikalt */
   }
 }
 
