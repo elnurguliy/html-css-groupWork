@@ -1,4 +1,3 @@
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,154 +5,170 @@
   text-decoration: none;
   font-family: Reddit Sans Condensed, sans-serif;
   box-sizing: border-box;
-}
+  }
 
-/* Header Styles */
-header {
+  
+  html, body {
+    overflow-x: hidden; /* Förhindrar horisontellt scrollande */
+  }
+  
+  .wrapper {
+  max-width: 1350px; /* Max bredd för innehållet */
+  margin: 0 auto; /* Centrera wrappern */
+  padding: 20px; /* Valfri padding */
+  }
+  
+  /* Header Styles */
+  header {
   background: #fff;
   position: relative;
   z-index: 100;
   width: 100%;
-  left: 0;
-  top: 0;
-}
-
-/* Container */
-.container {
+  margin-bottom: -25px;
+  }
+  
+  /* Container */
+  .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 0 10%; /* Flexibel padding för att anpassa skärmstorlek */
-  max-width: 100%;
-  width: 100%; /* Gör container responsiv */
-  max-width: 81em;
-  margin-left: auto;
-  margin-right: auto;
+  top: 0; /* Placerar den högst upp */
+  width: 97%; /* Gör den full bredd */
+  background: #fff; /* Se till att bakgrunden är vit så att texten är läsbar */
+  z-index: 100; /* Ser till att den ligger ovanpå annat innehåll */
+  padding: 0;
+  max-width: 1350px;
+  padding-top: 1em;
+  
+  }
+  
+  .scrolled header .navigation ul {
+  margin: 0;
+  margin-top: 1.3em;
+  margin-bottom: .6em;
+  }
+  
+  /* Ramlösa logotype */
+  /* Standardstorlek för desktop */
+.logo img {
+  padding-left: 2em;
+  width: 17em; /* Justera storleken för desktop här */
+  transition: width 0.3s ease; /* Smidig övergång när storleken ändras */
 }
 
-/* Navigation */
-header .navigation ul {
+/* För surfplattor och mindre skärmar (iPad, skärmar under 768px bredd) */
+@media (max-width: 1034px) {
+  .logo img {
+    width: 200px; /* Minska logotypstorleken för surfplattor */
+    padding: 0;
+  }
+}
+
+
+  /* Meny */
+  header .menu {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 1em;
+    padding-top: 1em;
+  }
+  
+  header .menu ul li {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  
+  /* Navigation */
+  header .navigation {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap; /* Hindrar texten från att brytas på flera rader */
+  }
+  
+  header .navigation ul {
+  display: flex;
+  vertical-align: middle;
   justify-content: flex-end;
   align-items: center;
   padding-left: 0;
   margin-left: 2%;
-}
-
-header .navigation ul li {
-  display: inline-block;
-  margin-right: 2%; /* Procentbaserad marginal */
-  font-size: 1em;
-  font-weight: 400;
-}
-
-header .navigation ul li:last-child {
-  margin-right: 0;
-}
-
-header .navigation ul li a {
+  }
+  
+  header .navigation ul li a {
+  display: block;
   padding-left: 1em;
-  font-size: 1em;
-  font-weight: 500;
-  color: #95c7ed;
-}
-
-/* Facebook Ikon */
-header .navigation ul li a#facebook-link {
+  padding-right: 1em;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #282f54;
+  white-space: nowrap; /* Håller ihop texten för att undvika radbrytningar */
+  }
+  
+  header .navigation ul li:last-child {
+  margin-right: 0;
+  }
+  
+  /* Facebook Ikon */
+  header .navigation ul li a#facebook-link {
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0;
   vertical-align: middle;
-}
-
-/* Hamburgermeny */
-header .menu {
-  display: none;
-}
-
-header .menu ul li {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-/* Media Query för Responsivitet */
-@media (max-width: 768px) {
+  }
+  
+  /* Media Query för Responsivitet */
+  @media (max-width: 768px) {
   header .menu {
-    display: block;
+  display: block;
   }
-
+  
   header .navigation {
-    display: none;
+  display: none;
   }
-
+  
   .container {
-    padding: 0 5%; /* Mer padding för mindre skärmar */
+  padding: 0 5%;
+  /* Mer padding för mindre skärmar */
   }
-
+  
   /* När hamburgermenyn är aktiv */
   header.active .navigation {
-    display: block;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-  }
-
-  header .navigation ul {
-    flex-direction: column;
-  }
-
-  header .navigation ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-
-/* Hamburger Menu */
-.hamburger {
-  padding-right: 0;
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.hamburger-inner {
   display: block;
-  margin-top: -2px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  }
+  
+  header .navigation ul {
+  flex-direction: column;
+  }
+  
+  header .navigation ul li {
+  margin-right: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+   }
+  }
+
+  @media screen and (max-width: 1034px) {
+    header .navigation ul li:nth-child(odd) {
+        background: #c6e4f1;
+    }
 }
 
-.hamburger--elastic .hamburger-inner {
-  top: 2px;
-}
-
-.hamburger-box {
-  width: 40px;
-  height: 24px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger .hamburger-inner {
-  background: #003f75;
-}
-
-.hamburger-inner,
-.hamburger-inner::after,
-.hamburger-inner::before {
-  width: 40px;
-  height: 4px;
-}
-
-/* Ramlösa logo */
-#logotype {
-  width: 100%; /* Flexibel logobredd */
-  max-width: 240px;
-  height: auto;
-  padding-top: 50px;
+article {
+  padding-top: 5em;
 }
 
 .title {
@@ -167,7 +182,27 @@ header .menu ul li {
   max-width: 100%;
   color: #282f54;
   font-weight: 600;
+  font-size: 1.1em;
 }
+
+.contact-content a {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.row {
+  max-width: 81em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 64.6875em) {
+  .contact-content {
+      
+      width: 66%;
+  }
+}
+
 
 .contact-content p {
   margin: 0px 0px 17px;
@@ -183,5 +218,15 @@ h1 {
 h2 {
   margin-top: 1em;
   margin-bottom: 1em;
-  font-size: 32px;
+  font-size: 2em;
+}
+
+/* När menyn är aktiv, skjuts innehållet ner */
+.menu-active .container {
+  margin-top: 500px; /* Justera beroende på menyns höjd */
+}
+
+.fblogo {
+  height: 55px;
+  width: 55px;
 }

@@ -8,8 +8,14 @@
   padding-left: 1em;
 }
 
+.wrapper {
+  max-width: 1350px; /* Max bredd för innehållet */
+  margin: 0 auto; /* Centrera wrappern */
+  padding: 20px; /* Valfri padding */
+  }
+  
 .headimg {
-  margin: 0px 0px 64px;
+  padding-top: 2em;
 }
 
 article {
@@ -37,11 +43,12 @@ p {
 }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 .row {
   margin-bottom: 3em;
+  font-size: 1.2em;
 }
 
 img {
@@ -58,15 +65,6 @@ img {
   box-sizing: border-box;
 }
 
-/* Header Styles */
-header {
-  background: #fff;
-  position: relative;
-  z-index: 100;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
 
 /* Container */
 .container {
@@ -82,21 +80,19 @@ header {
 }
 
 /* Navigation */
-header .navigation ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-left: 0;
-  margin-left: 2%;
-}
 
 header .navigation ul li {
   display: inline-block;
-  margin-right: 2%; /* Procentbaserad marginal */
   font-size: 1em;
   font-weight: 400;
-}
 
+}
+  
+@media screen and (max-width: 1034px) {
+  header .navigation ul li:nth-child(odd) {
+      background: #c6e4f1;
+  }
+}
 header .navigation ul li:last-child {
   margin-right: 0;
 }
@@ -119,10 +115,9 @@ header .navigation ul li a#facebook-link {
 
 /* Ramlösa logo */
 #logotype {
-  width: 100%; /* Flexibel logobredd */
-  max-width: 240px;
-  height: auto;
-  padding-top: 50px;
+   /* Flexibel logobredd */
+  max-width: 270px;
+  
 }
 
 
@@ -135,14 +130,16 @@ footer {
 }
 
 .footer-content {
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 81em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-content a {
-  text-decoration: none;
-  color: #384277;
+    text-decoration: underline;
+    font-style: italic;
 }
+
 
 .footer-content p {
   color: #282f54;
@@ -176,3 +173,413 @@ footer {
   margin-bottom: 0; /* Ingen extra marginal på sista paragrafen */
 }
 
+ /* Header Styles */
+ header {
+  background: #fff;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  margin-bottom: -25px;
+  display: flex;
+  justify-content: center;
+  }
+  
+  /* Container */
+  .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0; /* Placerar den högst upp */
+  width: 97%; /* Gör den full bredd */
+  background: #fff; /* Se till att bakgrunden är vit så att texten är läsbar */
+  z-index: 100; /* Ser till att den ligger ovanpå annat innehåll */
+  max-width: 1350px;
+  height: 5em;
+  }
+  
+  .scrolled header .navigation ul {
+  margin: 0;
+  margin-top: 1.3em;
+  
+  }
+  
+  /* Ramlösa logotype */
+  /* Standardstorlek för desktop */
+.logo img {
+  padding-left: 2em;
+  width: 17em; /* Justera storleken för desktop här */
+  transition: width 0.3s ease; /* Smidig övergång när storleken ändras */
+}
+
+/* För surfplattor och mindre skärmar (iPad, skärmar under 768px bredd) */
+@media (max-width: 1034px) {
+  .logo img {
+    width: 200px; /* Minska logotypstorleken för surfplattor */
+    
+  }
+}
+
+@media (max-width: 1034px) {
+  .column {
+  width: 100%;
+  margin: 0 auto;
+}
+}
+
+
+  /* Meny */
+  header .menu {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 2em;
+    padding-top: 1em;
+  }
+  
+  header .menu ul li {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  
+  /* Navigation */
+  header .navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap; /* Hindrar texten från att brytas på flera rader */
+  }
+  
+  header .navigation ul {
+  display: flex;
+  vertical-align: middle;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2em;
+  }
+  
+  header .navigation ul li a {
+  display: block;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.3em;
+  color: #282f54;
+  white-space: nowrap; /* Håller ihop texten för att undvika radbrytningar */
+  font-weight: 700;
+  }
+
+  
+  header .navigation ul li:last-child {
+  margin-right: 0;
+  }
+  
+  /* Facebook Ikon */
+  header .navigation ul li a#facebook-link {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  vertical-align: middle;
+  }
+  
+  /* Media Query för Responsivitet */
+  @media (max-width: 768px) {
+  header .menu {
+  display: block;
+  }
+  
+  header .navigation {
+  display: none;
+  }
+  
+  .container {
+  padding: 0 5%;
+  /* Mer padding för mindre skärmar */
+  }
+  
+  /* När hamburgermenyn är aktiv */
+  header.active .navigation {
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  }
+  
+  header .navigation ul {
+  flex-direction: column;
+  }
+  
+  header .navigation ul li {
+  margin-right: 0;
+  margin-bottom: 10px;
+   }
+  }
+  
+
+  /* När menyn är aktiv, skjuts innehållet ner */
+  .menu-active .main-container {
+    margin-top: 500px; /* Justera beroende på menyns höjd */
+  }
+
+   /* Media queries */
+  
+  /* För mobila enheter */
+  @media screen and (max-width: 768px) {
+    header ul {
+    margin: 0;
+    margin-top: .6em;
+    margin-bottom: .2em;
+    }
+    
+    header .navigation ul li {
+    text-align: center;
+    width: 100%;
+    }
+  }
+
+  /* För surfplattor */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    header .navigation ul {
+    padding: 0;
+    margin: 0;
+    float: auto;
+    width: 100%;
+    }
+    
+    
+    @media screen and (max-width: 1034px) {
+    header .navigation ul li a {
+    text-align: center;
+    padding: 1em;
+    }
+  }
+    
+    /* För större skärmar */
+    @media screen and (min-width: 1025px) {
+    header .navigation {
+    display: block;
+    }
+  }
+  
+    @media screen and (max-width: 1034px) {
+      .container {
+          padding: 0 1em;
+      }
+  }
+}
+
+  /* Standard-stil för hamburgarmenyn (göm den på större skärmar) */
+
+
+/* När skärmen är mindre än 1034px, visa hamburgarmenyn */
+@media (max-width: 1034px) {
+  .hamburger {
+    display: block; /* Visa hamburgarmenyn */
+    position: relative;
+    z-index: 101; /* Placera den ovanför annat innehåll */
+    
+  }
+
+  /* Göm den vanliga navigeringen på små skärmar */
+  header .navigation {
+    display: none;
+  }
+
+  /* När hamburgermenyn är aktiv, visa navigeringen */
+  header.active .navigation {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100; /* Se till att navigeringen ligger ovanpå */
+  }
+
+  /* Gör navigeringen vertikal istället för horisontell */
+  header .navigation ul {
+    flex-direction: column;
+    align-items: center; /* Justera menyn till center */
+    padding: 0;
+  }
+
+  /* Ge navigeringspunkterna lite mer utrymme på små skärmar */
+  header .navigation ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Stil för varje länk */
+  header .navigation ul li a {
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 1px solid #eee; /* Valfri gräns för separering */
+  }
+}
+
+/* För större skärmar */
+@media (min-width: 1035px) {
+  /* Dölj hamburgarmenyn på stora skärmar */
+  .hamburger {
+    display: none;
+  }
+
+  /* Visa den horisontella navigeringen */
+  header .navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header .navigation ul li {
+      text-align: center;
+      width: 100%;
+  }
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: -webkit-transform;
+  -webkit-transition-property: -webkit-transform;
+  -o-transition-property: -o-transform;
+  -moz-transition-property: transform, -moz-transform;
+  -moz-transition-property: transform, -moz-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform, -moz-transform, -o-transform;
+  transition-property: transform, -webkit-transform, -moz-transform, -o-transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: .15s;
+  -moz-transition-duration: .15s;
+  -o-transition-duration: .15s;
+  transition-duration: .15s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease
+}
+
+.hamburger-inner::after,
+.hamburger-inner::before {
+  content: "";
+  display: block
+}
+
+.hamburger-inner::before {
+  top: -10px
+}
+
+.hamburger-inner::after {
+  bottom: -10px
+}
+
+.hamburger:hover {
+  opacity: .7;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger .hamburger-inner {
+  background: #003f75;
+}
+
+.hamburger--elastic .hamburger-inner {
+  top: 2px;
+}
+
+.hamburger .hamburger-inner::before {
+  background: #003f75;
+
+}
+
+.hamburger .hamburger-inner::after {
+  background: #003f75;
+}
+
+
+    /* Grundstil för hamburgerknappen */
+    
+    /* Grundstil för hamburgerknappen */
+      .hamburger {
+        padding: 0;
+        font-size: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+
+      .hamburger-box {
+        width: 30px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+      }
+    
+
+    .hamburger-inner {
+      display: block;
+      background-color: #333;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      transition: all 0.3s ease;
+      transform: translateY(-50%);
+    }
+
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      content: "";
+      display: block;
+      width: 100%;
+      background-color: #333;
+      border-radius: 3px;
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger-inner::before {
+      top: -10px;
+    }
+
+    .hamburger-inner::after {
+      top: 10px;
+    }
+
+    /* När knappen är aktiv (klassen is-active) */
+    .hamburger.is-active .hamburger-inner {
+      transform: rotate(45deg) translateY(0);
+    }
+
+    .hamburger.is-active .hamburger-inner::before {
+      top: 0;
+      transform: rotate(90deg);
+    }
+
+    .hamburger.is-active .hamburger-inner::after {
+      top: 0;
+      opacity: 0;
+    }
+  
+    .fblogo {
+      height: 55px;
+      width: 55px;
+    }

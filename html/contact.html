@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt</title>
+    <title>Kontakt | Ramlösa</title>
     <meta
       name="description"
       content="Ramlösa är Sveriges naturliga mineralvatten med traditioner sedan 1707. Naturligt mineralvatten är den finaste beteckningen ett vatten kan få. När en ny flaska Ramlösa når din hand har 70 års arbete kommit till sin ände."
@@ -16,6 +16,8 @@
     />
 
     <link href="../sass-css/contact.css" rel="stylesheet" />
+    <link href="../sass-css/hamburger.css" rel="stylesheet">
+
     <link
       rel="icon"
       type="image/png"
@@ -31,71 +33,83 @@
   </head>
 
   <body class="preload" data-layout-id="4">
-    <header>
-      <div class="container clearfix">
-        <div class="logo">
-          <ul>
-            <li>
-              <a href="/">
-                <img
-                  src="https://ramlosa.se/resources/images/ramlosa_logo_2023.svg"
-                  alt="Ramlösa"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="menu">
-          <ul>
-            <li>
-              <button class="hamburger hamburger--elastic" type="button">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        <div class="navigation clearfix">
-          <ul>
-            <li class="navigation-item">
-              <a
-                href="https://ramlosa.se/produkter"
-                class="mellow_page_active mellow_page_3"
-                >Produkter</a
-              >
-            </li>
-            <li class="navigation-item">
-              <a
-                href="https://ramlosa.se/vart-vatten"
-                class="mellow_page_active mellow_page_13"
-                >Vårt vatten</a
-              >
-            </li>
-            <li class="navigation-item">
-              <a
-                href="https://ramlosa.se/kontakt"
-                class="mellow_page_active mellow_page_14 active"
-                >Kontakt</a
-              >
-            </li>
-
-            <li class="navigation-item">
-              <a
-                id="facebook-link"
-                href="https://www.facebook.com/Ramlosa/?fref=ts&ref=br_tf"
-                target="_blank"
-                class="fb-icon"
-              >
-                <img src="resources/images/fb_icon.svg" alt="Facebook" />
-              </a>
-            </li>
-          </ul>
-        </div>
+    <div class="wrapper">
+      <header>
+      <div class="header-container">
+      <div class="logo">
+      <a href="#">
+      <img id="logotype" src="../images/ramlosa_logo.svg" alt="Ramlösa logotyp">
+      </a>
       </div>
-    </header>
+      <div class="menu">
+      <button class="hamburger hamburger--elastic" type="button" aria-label="Huvudmeny">
+      <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+      </span>
+      </button>
+      </div>
+      
+      <div class="navigation">
+      <ul>
+      <li class="navigation-item">
+      <a href="https://ramlosa.se/produkter"
+      class="header-link">Produkter</a>
+      </li>
+      <li class="navigation-item">
+      <a href="https://ramlosa.se/vart-vatten" class="header-link">Vårt
+      vatten</a>
+      </li>
+      <li class="navigation-item">
+      <a href="https://ramlosa.se/vattenfonden"
+      class="header-link">Vattenfonden</a>
+      </li>
+      <li class="navigation-item">
+      <a href="https://ramlosa.se/historia" class="header-link">Historia</a>
+      </li>
+      <li class="navigation-item">
+      <a href="https://ramlosa.se/kontakt" class="header-link">Kontakt</a>
+      </li>
+      <li class="navigation-item">
+      <a id="facebook-link" href="https://www.facebook.com/Ramlosa/?fref=ts&ref=br_tf"
+      target="_blank" class="fb-icon" aria-label="Vår facebooksida">
+      <img class="fblogo" src="../images/Facebook-f_Logo-Blue-Logo.wine.svg" alt="Facebook logotyp">
+      </a>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const body = document.body; // Vi lägger till klassen på body
+          
+            if (hamburger) {
+              hamburger.addEventListener("click", function () {
+                
+                body.classList.toggle("menu-active"); // Lägg till eller ta bort klass för att flytta ner innehållet
+              });
+            } else {
+              console.error("Hamburger element not found!");
+            }
+          });
+    </script>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const header = document.querySelector("header");
+    
+    if (hamburger) {
+    hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("is-active");
+    header.classList.toggle("active");
+    });
+    } else {
+    console.error("Hamburger element not found!");
+    }
+    });
+    </script>
 
     <main>
       <section class="container">
@@ -117,14 +131,14 @@
                 sociala mediaplattformar och webbplatser,
                 <a
                   href="http://carlsbergsverige.se/cookie-policy"
-                  target="_blank"
+                  target="_blank" aria-label="Läs mer om användarvillkor och GDPR"
                   >klicka här</a
                 >.
               </p>
               <p>
-                E-post:&nbsp;<a href="mailto:konsumentservice@carlsberg.se"
+                E-post:&nbsp;<a href="mailto:konsumentservice@carlsberg.se" aria-label="Skicka email till konsumentservice"
                   >konsumentservice@carlsberg.se</a
-                ><br />Telefon:&nbsp;<a href="tel:020788020">020-78 80 20</a>
+                ><br />Telefon:&nbsp;<a href="tel:020788020" aria-label="Ring till konsumentservice">020-78 80 20</a>
               </p>
               <p>
                 Carlsberg Sverige, Konsumentservice/Ramlösa, Box 3040, 169 03
@@ -139,12 +153,12 @@
                 vi av oss till dig. Du kan även chatta direkt med vår kundtjänst
                 om du har frågor.
               </p>
-              <a href="https://nykund.carlsbergsverige.se/" target="_blank">
+              <a href="https://nykund.carlsbergsverige.se/" target="_blank" aria-label="Bli kund hos oss">
                 <button
                   style="
-                    padding: 13px 29px;
+                    padding: 25px 29px;
                     line-height: 17px;
-                    font-size: 14px;
+                    font-size: 18px;
                     font-weight: 600;
                   "
                 >
@@ -156,5 +170,6 @@
         </article>
       </section>
     </main>
+    </div>
   </body>
 </html>

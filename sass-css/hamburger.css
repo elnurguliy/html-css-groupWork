@@ -1,13 +1,13 @@
-/* Standard-stil för hamburgarmenyn (göm den på större skärmar) */
-
 
 /* När skärmen är mindre än 1034px, visa hamburgarmenyn */
 @media (max-width: 1034px) {
   .hamburger {
-    display: block; /* Visa hamburgarmenyn */
+    display: block;
+    /* Visa hamburgarmenyn */
     position: relative;
-    z-index: 101; /* Placera den ovanför annat innehåll */
-    
+    z-index: 101;
+    /* Placera den ovanför annat innehåll */
+
   }
 
   /* Göm den vanliga navigeringen på små skärmar */
@@ -23,13 +23,15 @@
     left: 0;
     width: 100%;
     background-color: white;
-    z-index: 100; /* Se till att navigeringen ligger ovanpå */
+    z-index: 100;
+    /* Se till att navigeringen ligger ovanpå */
   }
 
   /* Gör navigeringen vertikal istället för horisontell */
   header .navigation ul {
     flex-direction: column;
-    align-items: center; /* Justera menyn till center */
+    align-items: center;
+    /* Justera menyn till center */
   }
 
   /* Ge navigeringspunkterna lite mer utrymme på små skärmar */
@@ -41,12 +43,14 @@
   header .navigation ul li a {
     padding: 15px 20px;
     width: 100%;
-    border-bottom: 1px solid #eee; /* Valfri gräns för separering */
+    border-bottom: 1px solid #eee;
+    /* Valfri gräns för separering */
   }
 }
 
 /* För större skärmar */
 @media (min-width: 1035px) {
+
   /* Dölj hamburgarmenyn på stora skärmar */
   .hamburger {
     display: none;
@@ -57,22 +61,20 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+
   }
 }
 
 @media screen and (min-width: 768px) {
   header .navigation ul li {
-      text-align: center;
-      width: 100%;
+    text-align: center;
+    width: 100%;
   }
 }
 
 .hamburger-inner,
 .hamburger-inner::after,
 .hamburger-inner::before {
-  width: 40px;
-  height: 4px;
   background-color: #000;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -115,20 +117,10 @@
   opacity: .7;
 }
 
-.hamburger-box {
-  width: 40px;
-  height: 24px;
-  display: inline-block;
-  position: relative;
-}
-
 .hamburger .hamburger-inner {
   background: #003f75;
 }
 
-.hamburger--elastic .hamburger-inner {
-  top: 2px;
-}
 
 .hamburger .hamburger-inner::before {
   background: #003f75;
@@ -139,71 +131,81 @@
   background: #003f75;
 }
 
+/* Grundstil för hamburgerknappen */
+.hamburger {
+  padding: 0;
+  font-size: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 
-    /* Grundstil för hamburgerknappen */
-    
-    /* Grundstil för hamburgerknappen */
-      .hamburger {
-        padding: 0;
-        font-size: 0;
-        border: none;
-        background: none;
-        cursor: pointer;
-      }
-
-      .hamburger-box {
-        width: 30px;
-        height: 24px;
-        display: inline-block;
-        position: relative;
-      }
-    
-
-    .hamburger-inner {
-      display: block;
-      width: 100%;
-      height: 3px;
-      background-color: #333;
-      border-radius: 3px;
-      position: absolute;
-      top: 50%;
-      transition: all 0.3s ease;
-      transform: translateY(-50%);
-    }
-
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 3px;
-      background-color: #333;
-      border-radius: 3px;
-      position: absolute;
-      transition: all 0.3s ease;
-    }
-
-    .hamburger-inner::before {
-      top: -10px;
-    }
-
-    .hamburger-inner::after {
-      top: 10px;
-    }
-
-    /* När knappen är aktiv (klassen is-active) */
-    .hamburger.is-active .hamburger-inner {
-      transform: rotate(45deg) translateY(0);
-    }
-
-    .hamburger.is-active .hamburger-inner::before {
-      top: 0;
-      transform: rotate(90deg);
-    }
-
-    .hamburger.is-active .hamburger-inner::after {
-      top: 0;
-      opacity: 0;
-    }
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
 
 
+.hamburger-inner {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s ease;
+  transform: translateY(-50%);
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  top: 10px;
+}
+
+/* När knappen är aktiv (klassen is-active) */
+.hamburger.is-active .hamburger-inner {
+  transform: rotate(45deg) translateY(0);
+}
+
+.hamburger.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.hamburger.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 450px) {
+  .logo img {
+      padding-left: 1em !important;
+      width: 10em !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1034px) {
+  .logo img {
+    width: 200px; /* Minska logotypstorleken för surfplattor */
+    margin-top: 20px; /* Lägg till marginal från toppen */
+  }
+}
