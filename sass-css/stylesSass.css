@@ -70,6 +70,17 @@ header .navigation {
   margin: 0;
   white-space: nowrap;
 }
+
+header .navigation a {
+  color: #051F5C;; /* Grundfärg för menyn */
+  transition: color 0.5s ease; /* Lägger till en övergångseffekt */
+}
+
+header .navigation a:hover {
+  color: #027cff; /* Färgändring vid hover */
+}
+
+
 header .navigation ul {
   display: flex;
   vertical-align: middle;
@@ -97,13 +108,6 @@ header .navigation ul li a {
 header .navigation ul li:last-child {
   margin-right: 0;
 }
-
-@media (max-width: 1034px) {
-  header .navigation ul li:nth-child(odd) {
-    background: #c6e4f1;
-  }
-}  
-
 
 header .logo img {
   padding-left: 4em;
@@ -461,7 +465,7 @@ iframe {
     margin-bottom: 20px;
   }
   .footer-text {
-    text-align: left;
+    text-align: center;
     max-width: none;
   }
 }
@@ -532,16 +536,21 @@ iframe {
     font-size: 2em;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+
+@media (max-width: 1024px) {
   header .navigation ul {
     padding: 0;
     margin: 0;
     width: 100%;
   }
+  header .navigation ul li:nth-child(odd) {
+    background: #c6e4f1;
+  }
 }
+
 @media (max-width: 1034px) {
   header .navigation {
-    padding-right: 0.7em;
+    padding-right: 0.9em;
     padding-left: 0.7em;
   }
   header .navigation ul li a {
@@ -549,6 +558,7 @@ iframe {
     padding: 1em;
   }
 }
+
 @media (max-width: 1034px) and (max-width: 1034px) {
   .logo-header {
     padding: 0;
@@ -562,4 +572,12 @@ iframe {
   header .navigation {
     display: block;
   }
-}/*# sourceMappingURL=stylesSass.css.map */
+
+  @media (max-width: 1034px) {
+    header .navigation ul li:nth-child(odd) {
+      background: #c6e4f1;
+  }
+  }
+}
+
+/*# sourceMappingURL=stylesSass.css.map */
