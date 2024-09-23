@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Reddit Sans Condensed, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  margin-bottom: -30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-right: 1em;
+  padding-top: 1em;
+}
+header .menu ul li {
+  vertical-align: middle;
+  display: inline-block;
+}
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+header .navigation ul {
+  display: flex;
+  vertical-align: middle;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0;
+  margin-left: 2%;
+}
+header .navigation ul li a {
+  display: block;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #051F5C;
+  white-space: nowrap;
+}
+header .navigation ul li:last-child {
+  margin-right: 0;
+}
+header .navigation ul li a#facebook-link {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  max-width: 1350px;
+}
+
+.scrolled header .navigation ul {
+  margin: 0;
+  margin-top: 1.3em;
+  margin-bottom: 0.6em;
+}
+
+.logo img {
+  padding-left: 4em;
+  width: 17em;
+  transition: width 0.3s ease;
+}
+
+#logotype {
+  max-width: 270px;
+}
+
+article {
+  padding-top: 5em;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.contact-content {
+  margin: 0 auto;
+  max-width: 100%;
+  color: #051f5c;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.contact-content a {
+  text-decoration: underline;
+}
+.contact-content p {
+  margin: 0px 0px 17px;
+  font-size: 1.2em;
+  color: #051F5C;
+  line-height: 1.6em;
+}
+
+.row {
+  max-width: 81em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  margin: 32px 32px 32px 32px;
+  font-size: 48px;
+  color: #051F5C;
+}
+
+h2 {
+  color: #051F5C;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.menu-active .container {
+  margin-top: 500px;
+}
+
+.fblogo {
+  height: 55px;
+  width: 55px;
+}
+
+footer {
+  background-color: #d0dae6;
+  display: flex;
+  justify-content: center;
+  padding: 64px 0;
+  margin-top: 9vh;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 190px;
+  margin-bottom: 1em;
+  display: block;
+  padding-left: 2em;
+}
+
+.footer-text {
+  color: #051F5C;
+  max-width: 1180px;
+  text-align: left;
+  padding-left: 2em;
+}
+.footer-text p {
+  margin: 0 0 17.12px;
+  font-weight: 600;
+  line-height: 1.6em;
+}
+.footer-text p:last-child {
+  margin-bottom: 0;
+}
+.footer-text a {
+  text-decoration: underline;
+}
+
+@media (max-width: 1034px) {
+  .logo img {
+    width: 200px;
+    padding: 1em;
+  }
+}
+@media (max-width: 768px) {
+  header .menu {
+    display: block;
+    padding-bottom: 2em;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .navigation ul {
+    flex-direction: column;
+  }
+  header .navigation ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .container {
+    padding: 0 5%;
+  }
+  header.active .navigation {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+  }
+}
+@media screen and (max-width: 1034px) {
+  header .navigation ul li:nth-child(odd) {
+    background: #c6e4f1;
+  }
+}
+@media screen and (min-width: 64.6875em) {
+  .contact-content {
+    width: 66%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .footer-logo {
+    padding-left: 0.5em;
+    margin-bottom: 20px;
+  }
+  .footer-text {
+    text-align: left;
+    max-width: none;
+    padding-left: 0.5em;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer-text {
+    text-align: left;
+  }
+}/*# sourceMappingURL=contactStyles.css.map */

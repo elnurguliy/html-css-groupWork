@@ -1,0 +1,638 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Reddit Sans Condensed, sans-serif;
+  box-sizing: border-box;
+}
+
+.top-container,
+header {
+  display: flex;
+  background: #fff;
+  z-index: 100;
+}
+
+.top-container {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  max-width: 1350px;
+}
+
+.videos-row,
+header {
+  justify-content: center;
+}
+
+header .menu ul li,
+header .navigation ul li a#facebook-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#video-1,
+header {
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.footer-text a,
+.redcross-text a {
+  text-decoration: underline;
+}
+
+.footer-text a {
+  display: inline-block; /* Gör att vi kan animera storleken */
+  transition: transform 0.3s ease; /* Lägger till en smidig övergång */
+}
+
+.footer-text a:hover {
+  transform: scale(1.2); /* Gör länken 20% större vid hover */
+}
+
+main {
+  margin-bottom: 4em;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 81em;
+}
+
+body {
+  scroll-padding-top: 6rem;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+header {
+  margin-bottom: -30px;
+  position: fixed;
+  height: 6rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* makes the clickable area larger */
+.top-container a {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 0.5em;
+}
+
+.videos,
+footer {
+  background-color: #d0dae6;
+  display: flex;
+}
+
+.scrolled header .navigation ul {
+  margin: 1.3em 0 0.6em;
+}
+
+header .logo img {
+  padding-left: 4em;
+  width: 17em;
+  transition: width 0.3s ease;
+}
+
+#logotype {
+  max-width: 270px;
+}
+
+header .menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-right: 1em;
+}
+
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2em 0 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+header .navigation ul {
+  display: flex;
+  vertical-align: middle;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0;
+  margin-left: 2%;
+}
+
+header .navigation ul li a {
+  display: block;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #051F5C;
+  white-space: nowrap;
+}
+
+header .navigation ul li:last-child {
+  margin-right: 0;
+}
+
+header .navigation ul li a#facebook-link {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+.fblogo {
+  height: 55px;
+  width: 55px;
+}
+
+@media (max-width: 768px) {
+  header .menu {
+    display: block;
+    padding-right: 1.5em;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  .container {
+    padding: 0 5%;
+  }
+
+  header.active .navigation {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  header .navigation ul {
+    flex-direction: column;
+  }
+
+  header .navigation ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.main-1 {
+  margin: 0 auto;
+  transition: margin-top 0.3s;
+  max-width: 100%;
+}
+
+.menu-active .main-1 {
+  margin-top: 500px;
+}
+
+.embed-1-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 57px auto;
+  position: relative;
+  padding-top: 5em;
+  padding-bottom: 56.25%;
+}
+
+@media (max-width: 640px) {
+  .embed-1-container {
+    margin: 56px auto;
+  }
+}
+
+#video-1 {
+  position: absolute;
+  margin: 0;
+  height: 100%;
+  border: 0;
+}
+
+.redcross {
+  color: #282f54;
+  padding: 0 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.redcross-text {
+  color: #051F5C;
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+}
+
+.redcross h1 {
+  text-align: left;
+  font-size: 2.5rem;
+  letter-spacing: 0.03em;
+  padding-bottom: 0.5em;
+}
+
+.redcross p {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.redcross-text a {
+  display: block;
+  padding-top: 1em;
+}
+
+@media (min-width: 1035px) {
+  .redcross .redcross-text {
+    float: left;
+    margin-right: 2%;
+    width: 57.5%;
+  }
+}
+
+@media (max-width: 1035) {
+  .redcross {
+    padding: 16px 32px;
+  }
+}
+
+dd,
+dt,
+li:not(.navigation-item),
+p {
+  margin-bottom: 0;
+  line-height: 1.4em;
+  font-size: 1.07em;
+  text-rendering: geometricPrecision;
+}
+
+#redcross-image {
+  width: 100%;
+  max-width: 458px;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+#product-slider {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin: 2em 0;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.slider-container {
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+#product-slider-wrapper {
+  margin: 2em 0;
+  position: relative;
+}
+
+#product-slider-wrapper .slider-controls {
+  transition: 0.25s ease-in-out;
+  width: 5.5%;
+  position: absolute;
+  top: 500%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+#product-slider-wrapper .slider-controls.prev {
+  left: 1em;
+}
+
+#product-slider-wrapper .slider-controls img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#product-slider-wrapper #product-slider {
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+#product-slider-wrapper h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+  color: #051F5C;
+}
+
+.product-row .outer-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  width: calc(157px * 7 + 3em * 6);
+  margin: 0 auto;
+}
+
+.product-row .inner-container {
+  width: 4082px;
+  left: 0;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.each-item {
+  position: relative;
+  width: 157px;
+  margin: 0 3px;
+}
+
+#product-slider-wrapper #product-slider .shadow img,
+.footer-text,
+.videos,
+footer {
+  width: 100%;
+}
+
+#product-slider .product {
+  flex: 0 0 auto;
+  position: relative;
+  text-align: center;
+  background-color: transparent;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 400px;
+}
+
+#product-slider-wrapper #product-slider .product-image {
+  max-width: 63%;
+}
+
+#product-slider .each-item a .product-image {
+  transform: translateY(12px);
+}
+
+#product-slider-wrapper #product-slider .shadow {
+  position: relative; /* Placera skuggan absolut */
+  bottom: 0; /* Justera skuggan till botten av produkten */
+  animation: none; 
+  opacity: 0.35;
+}
+
+
+#product-slider .product img {
+  /* Standard tillstånd utan hover */
+  transition: transform 0.5s ease-in-out;
+  /* Smidig övergång när musen tas bort */
+}
+
+#product-slider .product:hover img {
+  /* Aktivera en enkel översättningsrörelse vid hover */
+  transform: translateY(-10px); /* Flytta upp bilden */
+}
+
+#product-slider .product img {
+  /* Smidig övergång när du slutar hover */
+  transition: transform 0.5s ease-in-out;
+}
+
+#product-slider .product img {
+  /* Här säkerställer vi en smidig övergång alltid */
+  transition: transform 5s ease-in-out;
+}
+
+#product-slider .product {
+  position: relative; /* Gör att vi kan positionera skuggan relativt produkten */
+}
+
+#product-slider .product:hover .product-image {
+  animation: float 2s ease-in-out infinite; /* Starta animation vid hover */
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0); /* Starta och sluta vid ursprungsläget */
+  }
+  50% {
+    transform: translateY(-10px); /* Bilden rör sig upp vid 50% */
+  }
+}
+
+@media (min-width: 1200px) {
+  #product-slider-wrapper #product-slider {
+    text-align: center;
+    float: left;
+    width: 95%;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 758px) {
+  #product-slider-wrapper #product-slider {
+    text-align: center;
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (max-width: 820px) and (min-width: 758px) {
+  #product-slider-wrapper #product-slider {
+    text-align: center;
+    float: left;
+    width: 85%;
+  }
+}
+
+@media (max-width: 450px) {
+  #product-slider-wrapper .slider-controls {
+    top: 500%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 1200px) {
+  #product-slider-wrapper .slider-controls {
+    top: 500%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 502px) {
+  #product-slider-wrapper .slider-controls {
+    top: 350%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 276px) {
+  #product-slider-wrapper .slider-controls {
+    top: 250%;
+    transform: translateY(-50%);
+  }
+}
+
+.videos {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin: 20px auto;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+.videos h2 {
+  padding-bottom: 5%;
+  color: #051F5C;
+}
+
+iframe {
+  margin: 20px;
+}
+
+.videos-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1034) {
+  .videos h2 {
+    font-size: 2em;
+  }
+}
+
+footer {
+  padding: 64px 0;
+  justify-content: center;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 190px;
+  margin-bottom: 1em;
+  display: block;
+  padding-left: 2em;
+}
+
+.footer-text {
+  color: #051F5C;
+  max-width: 1180px;
+  text-align: left;
+  padding-left: 2em;
+}
+
+
+.footer-text p {
+  margin: 0 0 17.12px;
+  font-weight: 600;
+  line-height: 1.6em;
+}
+
+.footer-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  header ul {
+    margin: 0.6em 0 0.2em;
+  }
+
+  header .navigation ul li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  #footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-text {
+    text-align: center;
+    max-width: none;
+  }
+}
+
+.footer-text {
+  text-align: left;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  header .navigation ul {
+    padding: 0;
+    margin: 0;
+    float: auto;
+    width: 100%;
+  }
+
+  header .navigation ul li:nth-child(odd) {
+    background: #3292c2;
+  }
+}
+
+@media (max-width: 1034px) {
+  header .navigation ul li a {
+    text-align: center;
+    padding: 1em;
+  }
+
+  @media (max-width: 1034px) {
+    .logo-header {
+      padding: 0;
+    }
+  }
+
+  header .navigation ul li:nth-child(odd) {
+    background: #c6e4f1;
+  }
+}
+
+@media (min-width: 1025px) {
+  header .navigation {
+    display: block;
+  }
+}
+
+@media (max-width: 1034px) {
+  .container {
+    padding: 0 1em;
+  }
+
+  header .navigation {
+    padding-right: 0.7em;
+    padding-left: 0.7em;
+  }
+}
