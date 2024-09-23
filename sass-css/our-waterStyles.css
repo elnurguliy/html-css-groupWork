@@ -1,0 +1,417 @@
+/* Lines below are the same in hamburger.css */
+.main-container {
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #051F5C;
+  max-width: 1400px;
+  margin: 45px auto;
+}
+
+header {
+  display: flex;
+  background: #fff;
+  z-index: 100;
+  background: #fff;
+  z-index: 100;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  margin-bottom: -30px;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+header .navigation ul {
+  display: flex;
+  vertical-align: middle;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2em;
+}
+header .navigation ul li {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+}
+header .navigation ul li a {
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #051F5C;
+  display: block;
+  font-size: 1.3em;
+  white-space: nowrap;
+  font-weight: 700;
+}
+header .navigation ul li a#facebook-link {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+header .navigation ul li:last-child {
+  margin-right: 0;
+}
+header .menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-right: 2em;
+  padding-top: 1em;
+}
+header .menu ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.top-container {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  max-width: 1350px;
+  display: flex;
+  background: #fff;
+  z-index: 100;
+}
+
+.wrapper {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.headimg {
+  padding-top: 2em;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  color: #051F5C;
+  width: 85%;
+  margin: 0 auto;
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.4em;
+  font-size: 1.07em;
+  font-weight: 600;
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  margin: 32px 0;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+.row {
+  margin-bottom: 3em;
+  font-size: 1.2em;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Reddit Sans Condensed, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10%;
+  max-width: 95%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#logotype {
+  max-width: 270px;
+}
+
+footer {
+  background-color: #d0dae6;
+  width: 100%;
+  padding: 64px 0;
+}
+
+.header-container {
+  background: #fff;
+  z-index: 100;
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+  max-width: 1350px;
+  height: 6em;
+}
+
+.footer-content {
+  max-width: 81em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-content a {
+  text-decoration: underline;
+}
+.footer-content p {
+  color: #282f54;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 5%;
+  padding: 0 5%;
+}
+
+#footer-logo {
+  width: 100%;
+  max-width: 190px;
+  margin-bottom: 1em;
+}
+
+.footer-text {
+  width: 100%;
+  max-width: 1180.81px;
+}
+.footer-text p {
+  margin: 0 0 17.12px;
+}
+.footer-text p:last-child {
+  margin-bottom: 0;
+}
+
+.scrolled header .navigation ul {
+  margin: 1.3em 0 0;
+}
+
+.logo img {
+  padding-left: 5em;
+  width: 17em;
+  transition: width 0.3s ease;
+}
+
+.menu-active .main-container {
+  margin-top: 500px;
+}
+
+.fblogo {
+  height: 55px;
+  width: 55px;
+}
+
+.hamburger-inner {
+  width: 40px;
+  height: 4px;
+  display: block;
+  border-radius: 3px;
+  position: absolute;
+  transition: 0.3s;
+}
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  display: block;
+  border-radius: 3px;
+  position: absolute;
+  transition: 0.3s;
+  content: "";
+  width: 100%;
+  top: 10px;
+}
+.hamburger-inner::before {
+  width: 40px;
+  height: 4px;
+  display: block;
+  border-radius: 3px;
+  position: absolute;
+  transition: 0.3s;
+  content: "";
+  width: 100%;
+  top: -10px;
+}
+
+.hamburger {
+  padding: 50px;
+  font-size: 0;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+.hamburger .hamburger-inner {
+  background: #003f75;
+}
+.hamburger .hamburger-inner::after {
+  background: #003f75;
+}
+.hamburger .hamburger-inner::before {
+  background: #003f75;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger.is-active .hamburger-inner {
+  transform: rotate(45deg) translateY(0);
+}
+.hamburger.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(90deg);
+}
+.hamburger.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .main-container {
+    margin: 45px auto;
+  }
+}
+@media screen and (max-width: 1034px) {
+  header .navigation ul li:nth-child(odd) {
+    background: #c6e4f1;
+  }
+}
+@media (max-width: 768px) {
+  header .menu {
+    display: block;
+    padding-right: 2.7em;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .navigation ul {
+    flex-direction: column;
+  }
+  header .navigation ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  header ul {
+    margin: 2.6em -3em 1.2em;
+  }
+  .container {
+    padding: 0 5%;
+  }
+  header.active .navigation {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  header .navigation ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) and (min-width: 1025px) {
+  header .navigation {
+    display: block;
+  }
+}
+@media (max-width: 1034px) {
+  header .navigation {
+    display: none;
+  }
+  header .navigation ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  header .navigation ul li {
+    margin-bottom: 10px;
+  }
+  header .navigation ul li a {
+    text-align: center;
+    padding: 1em;
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 0 solid #eee;
+  }
+  .container {
+    padding: 0 1em;
+  }
+  .logo img {
+    width: 220px;
+  }
+  .column {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 101;
+  }
+  header.active .navigation {
+    display: block;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+  }
+}
+@media (min-width: 1035px) {
+  .hamburger {
+    display: none;
+  }
+  header .navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  header .navigation ul li {
+    text-align: center;
+    width: 100%;
+  }
+}/*# sourceMappingURL=our-waterStyles.css.map */
